@@ -1,0 +1,11 @@
+{
+  "name": "desert-tree-camp",
+  "private": true,
+  "type": "module",
+  "description": "Website for Desert Tree Camp & Tours, Wadi Rum",
+  "scripts": {
+    "build": "python3 tools/build.py",
+    "test": "node --test",
+    "serve": "python3 -m http.server 8000"
+  }
+}
