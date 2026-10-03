@@ -169,10 +169,9 @@ class Translator:
         self.keys.append(key)
         if self.cat is None:
             return s
-        out = tr_text(self.cat, s)
-        if out == s:
+        if lookup(self.cat, key) is None:
             self.missing.add(key)
-        return out
+        return tr_text(self.cat, s)
 
     def attrs(self, el):
         a = dict(el.attrs)
