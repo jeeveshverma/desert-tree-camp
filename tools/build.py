@@ -11,7 +11,12 @@ No dependencies beyond the Python 3 standard library.
 import html
 import json
 import pathlib
+import re
+import sys
 from datetime import date
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import i18n  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = json.loads((ROOT / "data/site.json").read_text(encoding="utf-8"))
@@ -23,6 +28,18 @@ N_PROGS = sum(1 for p in PROGS if p["group"] != "custom")
 NUM_WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
              "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen"]
 AR_NUM = "٠١٢٣٤٥٦٧٨٩"
+
+# Site languages: (folder/code, hreflang, name in that language). English lives at the root.
+LANGS = [("en", "en", "English"), ("fr", "fr", "Français"), ("de", "de", "Deutsch"), ("it", "it", "Italiano"),
+         ("es", "es", "Español"), ("nl", "nl", "Nederlands"), ("pl", "pl", "Polski"), ("ru", "ru", "Русский"),
+         ("zh", "zh-Hans", "简体中文"), ("ja", "ja", "日本語"), ("ko", "ko", "한국어")]
+I18N = ROOT / "data/i18n"
+CATALOGS = {c: json.loads((I18N / f"{c}.json").read_text(encoding="utf-8"))
+            for c, _, _ in LANGS[1:] if (I18N / f"{c}.json").exists()}
+BUILT = [l for l in LANGS if l[0] == "en" or l[0] in CATALOGS]
+LANG = "en"        # language being built
+SOURCE = {}        # English catalog keys -> pages they appear on
+MISSING = {}       # language -> keys with no translation
 e = html.escape
 
 
@@ -94,8 +111,14 @@ def price_rows(p):
 
 
 # ---------------------------------------------------------------- structured data
-def abs_url(path):
-    return SITE["site_url"].rstrip("/") + "/" + path.replace("index.html", "")
+def lang_prefix(code=None):
+    code = code or LANG
+    return "" if code == "en" else f"{code}/"
+
+
+def abs_url(path, asset=False, code=None):
+    prefix = "" if asset else lang_prefix(code)
+    return SITE["site_url"].rstrip("/") + "/" + prefix + path.replace("index.html", "")
 
 
 def crumbs_ld(*items):
@@ -143,12 +166,15 @@ CSP = ("default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';
 
 
 def head(title, desc, path, root, jsonld=None):
-    url = SITE["site_url"].rstrip("/") + "/" + path.replace("index.html", "")
+    url = abs_url(path)
+    alt = "".join(f'<link rel="alternate" hreflang="{h}" href="{e(abs_url(path, code=c))}">' for c, h, _ in BUILT) if path != "404.html" else ""
+    alt += f'<link rel="alternate" hreflang="x-default" href="{e(abs_url(path, code="en"))}">' if alt else ""
+    hl = next(h for c, h, _ in LANGS if c == LANG)
     blocks = jsonld if isinstance(jsonld, list) else [jsonld] if jsonld else []
     ld = "".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False).replace("</", "<\\/")}</script>' for b in blocks)
     full = title if title == SITE["name"] else f"{title} · {SITE['name']}"
     return f"""<!doctype html>
-<html lang="en">
+<html lang="{hl}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -157,6 +183,7 @@ def head(title, desc, path, root, jsonld=None):
 <title>{e(full)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{e(url)}">
+{alt}
 <meta property="og:type" content="website">
 <meta property="og:title" content="{e(full)}">
 <meta property="og:description" content="{e(desc)}">
@@ -183,9 +210,9 @@ def header(root, active):
   <div class="wrap">
     <a class="brand" href="{root}index.html" aria-label="{e(SITE['name'])}, home">
       <span class="mark ar" lang="ar">{SITE['name_ar']}</span>
-      <span class="words"><b>DESERT TREE</b><small>CAMP &amp; TOURS · WADI RUM</small></span>
+      <span class="words" translate="no"><b>DESERT TREE</b><small>CAMP &amp; TOURS · WADI RUM</small></span>
     </a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <!--LANGS--><button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu="Menu" data-close="Close">Menu</button>
     <nav id="site-nav" aria-label="Main">{links}<a class="btn" href="{root}book.html">Book your trip</a></nav>
   </div>
 </header>
@@ -204,7 +231,7 @@ def footer(root):
   <div class="wrap foot-grid">
     <div>
       <div class="mark ar" lang="ar">{SITE['name_ar']}</div>
-      <div class="tl">Desert Tree Camp &amp; Tours</div>
+      <div class="tl" translate="no">Desert Tree Camp &amp; Tours</div>
       <p style="margin-top:16px;max-width:36ch">{e(SITE['tagline'])}. Run by Zayed and his brothers in {e(SITE['address'])}.</p>
     </div>
     <div><h4>Tours</h4><ul>{tours}<li><a href="{root}tours.html">All tours</a></li></ul></div>
@@ -227,11 +254,43 @@ def wa_float():
     return f'\n<a class="wa-float" href="{e(wa_link(msg))}" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">{icon}<span>WhatsApp</span></a>'
 
 
+def to_24h(text):
+    """'2:00 PM' -> '14:00'. Every language besides English uses the 24-hour clock."""
+    def conv(m):
+        h = int(m.group(1)) % 12 + (12 if m.group(3) == "PM" else 0)
+        return f"{h:02d}:{m.group(2)}"
+    return re.sub(r"\b(\d{1,2}):(\d{2}) (AM|PM)\b", conv, text)
+
+
+def lang_switcher(path, site_root):
+    if len(BUILT) < 2:
+        return ""
+    cur = next(n for c, _, n in BUILT if c == LANG)
+    items = "".join(
+        f'<li><a href="{site_root}{lang_prefix(c)}{path}" hreflang="{h}" lang="{h}"{" aria-current=\"true\"" if c == LANG else ""}>{e(n)}</a></li>'
+        for c, h, n in BUILT)
+    return (f'<details class="langs" translate="no"><summary aria-label="Language: {e(cur)}">'
+            f'<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-9 9h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>'
+            f'<span>{LANG.upper()}</span></summary><ul>{items}</ul></details>')
+
+
 def page(path, title, desc, active, body, jsonld=None, tail=""):
     depth = path.count("/")
-    root = "../" * depth
+    page_root = "../" * depth                                  # links to pages in this language
+    site_root = "../" * (depth + (LANG != "en"))               # the site root, where assets live
     fab = "" if path == "book.html" else wa_float()
-    out = head(title, desc, path, root, jsonld) + header(root, active) + body.replace("{root}", root) + footer(root) + fab + tail.replace("{root}", root) + "\n</body>\n</html>\n"
+    out = head(title, desc, path, "{root}", jsonld) + header("{root}", active) + body + footer("{root}") + fab + tail + "\n</body>\n</html>\n"
+    out = out.replace("<!--LANGS-->", lang_switcher(path, site_root))
+    out = out.replace("{root}assets/", site_root + "assets/").replace("{root}", page_root)
+    if LANG == "en":
+        for k in i18n.collect(out):
+            SOURCE.setdefault(k, [])
+            if path not in SOURCE[k]:
+                SOURCE[k].append(path)
+    else:
+        out, missing = i18n.translate(to_24h(out), CATALOGS[LANG])
+        MISSING.setdefault(LANG, set()).update(missing)
+    path = lang_prefix() + path
     f = ROOT / path
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text(out, encoding="utf-8")
@@ -323,7 +382,7 @@ def gallery():
         f'<figure class="g {cls}"><a href="{{root}}assets/img/photos/{n}-1600.jpg" data-lightbox>{img_tag(f"assets/img/photos/{n}-800.jpg", alt, sizes="(max-width: 700px) 50vw, 400px")}</a></figure>'
         for n, alt, cls in GALLERY
     )
-    return f'<div class="gallery">{items}</div>'
+    return f'<div class="gallery" data-viewer="Photo viewer" data-prev="Previous photo" data-next="Next photo" data-close="Close">{items}</div>'
 
 
 def steps():
@@ -509,7 +568,7 @@ def build_index():
 def build_tours():
     body = f"""
 <section class="page-head lattice"><div class="ghost ar" lang="ar" aria-hidden="true">البرامج</div><div class="wrap">
-  <div class="crumbs"><a href="{{root}}index.html">Home</a> / Tours</div>
+  <div class="crumbs"><a href="{{root}}index.html">Home</a> / <span>Tours</span></div>
   <h1>Tours in Wadi Rum</h1>
   <p>{NUM_WORDS[N_PROGS]} programmes, from a short camel ride to four days of trekking, plus custom trips. Prices are per person and drop as your group grows.</p>
 </div></section>
@@ -556,7 +615,7 @@ def build_tour(p):
     facts = [("From", f"{fp} JOD per person") if fp is not None else ("Price", "on request"), ("Duration", p["duration"]), ("Starts", p["start"])]
     if p.get("partner"):
         facts.append(("Run by", "our local partner"))
-    facts_html = "".join(f'<span class="fact"><b>{k}</b>{e(v)}</span>' for k, v in facts)
+    facts_html = "".join(f'<span class="fact"><b>{k}</b><span>{e(v)}</span></span>' for k, v in facts)
     desc_html = "".join(f"<p>{e(x)}</p>" for x in p["description"])
     inc = "".join(f"<li>{e(x)}</li>" for x in p["includes"])
     fit = f"<h2>Fitness</h2><p>{e(p['fitness'])}</p>" if p.get("fitness") else ""
@@ -580,7 +639,7 @@ def build_tour(p):
     if price is not None:
         ld["offers"] = {"@type": "Offer", "price": price, "priceCurrency": "JOD", "availability": "https://schema.org/InStock"}
     if p.get("image"):
-        ld["image"] = abs_url(p["image"])
+        ld["image"] = abs_url(p["image"], asset=True)
     if p.get("itinerary"):
         ld["itinerary"] = {"@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": b["title"], "description": "; ".join(b["items"])}
@@ -588,7 +647,7 @@ def build_tour(p):
 
     body = f"""
 <section class="page-head lattice"><div class="ghost ar" lang="ar" aria-hidden="true">وادي رم</div><div class="wrap">
-  <div class="crumbs"><a href="{{root}}index.html">Home</a> / <a href="{{root}}tours.html">Tours</a> / {e(p['name'])}</div>
+  <div class="crumbs"><a href="{{root}}index.html">Home</a> / <a href="{{root}}tours.html">Tours</a> / <span>{e(p['name'])}</span></div>
   <h1>{e(p['name'])}</h1>
   <p>{e(p['summary'])}</p>
 </div></section>
@@ -630,7 +689,7 @@ def build_camp():
     L = SITE["links"]
     body = f"""
 <section class="page-head lattice"><div class="ghost ar" lang="ar" aria-hidden="true">المخيم</div><div class="wrap">
-  <div class="crumbs"><a href="{{root}}index.html">Home</a> / The camp</div>
+  <div class="crumbs"><a href="{{root}}index.html">Home</a> / <span>The camp</span></div>
   <h1>Desert Tree Camp</h1>
   <p>A Bedouin camp in Wadi Rum, run by Zayed and his brothers. Every overnight tour includes a tent, dinner and breakfast.</p>
 </div></section>
@@ -660,7 +719,7 @@ def build_about():
     mp = SITE["meeting_point"]
     body = f"""
 <section class="page-head lattice"><div class="ghost ar" lang="ar" aria-hidden="true">عائلتنا</div><div class="wrap">
-  <div class="crumbs"><a href="{{root}}index.html">Home</a> / About us</div>
+  <div class="crumbs"><a href="{{root}}index.html">Home</a> / <span>About us</span></div>
   <h1>A Bedouin family in Wadi Rum</h1>
   <p>Zayed and his brothers run Desert Tree Camp &amp; Tours in the desert where their family has lived for generations.</p>
 </div></section>
@@ -691,7 +750,7 @@ def build_book():
     night_opts = "".join(f'<label><input type="radio" name="night" value="{o["id"]}"{" checked" if i == 0 else ""}><span>{night_label(o)}</span></label>' for i, o in enumerate(DATA["overnight_options"]))
     body = f"""
 <section class="page-head lattice"><div class="ghost ar" lang="ar" aria-hidden="true">اطلب رحلتك</div><div class="wrap">
-  <div class="crumbs"><a href="{{root}}index.html">Home</a> / Book your trip</div>
+  <div class="crumbs"><a href="{{root}}index.html">Home</a> / <span>Book your trip</span></div>
   <h1>Book your trip</h1>
   <p>Fill in a few details to see the price, then send your request to Zayed on WhatsApp. Nothing is booked until we confirm, and you pay in cash when you arrive.</p>
 </div></section>
@@ -710,7 +769,7 @@ def build_book():
       <div class="fl full" id="w-stars"><label class="check"><input type="checkbox" id="f-stars" name="stargazing"> Add the 2-hour stargazing experience (15 JOD per person)</label></div>
       <div class="fl"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
       <div class="fl"><label for="f-country">Country</label><input id="f-country" name="country" type="text" autocomplete="country-name"></div>
-      <div class="fl full"><label for="f-from">Coming from</label><select id="f-from" name="from"><option>Not decided yet</option><option>Aqaba</option><option>Petra / Wadi Musa</option><option>Amman</option><option>Other</option></select></div>
+      <div class="fl full"><label for="f-from">Coming from</label><select id="f-from" name="from"><option value="Not decided yet">Not decided yet</option><option value="Aqaba">Aqaba</option><option value="Petra / Wadi Musa">Petra / Wadi Musa</option><option value="Amman">Amman</option><option value="Other">Other</option></select></div>
       <div class="fl full"><label for="f-notes">Anything else?</label><textarea id="f-notes" name="notes" placeholder="Dietary needs, fitness for hikes, a special occasion…"></textarea></div>
       <p class="err" id="err" role="alert" hidden></p>
       <button class="btn gold" type="submit">Prepare my WhatsApp message</button>
@@ -719,6 +778,7 @@ def build_book():
       <div class="estimate" id="est" aria-live="polite"><h3>Your price</h3><p class="empty">Choose a tour and the number of guests.</p></div>
       <div class="estimate" id="out" hidden>
         <h3>Your message to Zayed</h3>
+        <p class="notes" style="margin-top:6px">It's in English, so Zayed can read it straight away.</p>
         <div class="preview" id="msg" style="margin-top:12px"></div>
         <div class="send-row" style="margin-top:14px"><a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a><button class="btn line" type="button" id="copy">Copy text</button></div>
         <p class="notes" style="margin-top:10px">If WhatsApp doesn't open, copy the text and send it to {SITE['whatsapp_display']}.</p>
@@ -729,9 +789,39 @@ def build_book():
 </div></section>
 <div class="toast" id="toast" hidden></div>"""
     data_json = json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/")
+    js_i18n = json.dumps(js_catalog(), ensure_ascii=False).replace("</", "<\\/")
     tail = f"""<script id="tour-data" type="application/json">{data_json}</script>
+<script id="i18n" type="application/json">{js_i18n}</script>
 <script type="module" src="{{root}}assets/js/book.js"></script>"""
     return page("book.html", "Book your trip", "Check prices and send a booking request to Desert Tree Camp & Tours on WhatsApp. Pay in cash on arrival, free cancellation.", "book.html", body, crumbs_ld(("Book your trip", "book.html")), tail=tail)
+
+
+# Text that book.js builds in the browser, so it never appears in the English HTML.
+JS_STRINGS = [
+    "Your price", "Total", "Price", "Zayed will quote", "about $1",
+    "This is an estimate. Zayed confirms the final price on WhatsApp. Pay in cash on arrival.",
+    ", child 3-10", "Children under 3", "free", "Stargazing add-on",
+    "Choose a programme.", "Add at least one guest aged 3 or over.",
+    "This programme is planned around you. Zayed will send you a price.",
+    "For a group of 1, Zayed will send you a price.",
+    "Full-day camel ride: plus a camel for the guide. Zayed will confirm the price.",
+    "Balloon flights depend on the weather. Zayed will confirm availability.",
+    "Please choose a date.", "Please add at least one guest aged 3 or over.", "Please add your name.",
+    "Copied", "Text selected. Copy it with your keyboard.",
+]
+
+
+def js_keys():
+    texts = JS_STRINGS + [p["name"] for p in PROGS] + [o["name"] for o in DATA["overnight_options"]]
+    texts += [o["label"] for p in PROGS for o in p.get("stay_options", []) if o.get("label")]
+    return [i18n.make_key(t)[0] for t in texts]
+
+
+def js_catalog():
+    if LANG == "en":
+        return {}
+    cat = CATALOGS[LANG]
+    return {k: cat[k] for k in js_keys() if i18n.lookup(cat, k) is not None}
 
 
 def build_404():
@@ -744,10 +834,31 @@ def build_404():
     return page("404.html", "Page not found", "Page not found.", "", body)
 
 
-def main():
+def build_language(code):
+    global LANG
+    LANG = code
     pages = [build_index(), build_tours(), build_camp(), build_about(), build_book()]
     pages += [build_tour(p) for p in PROGS]
-    build_404()
+    if code == "en":
+        build_404()
+    return pages
+
+
+def main():
+    pages = []
+    for code, _, _ in BUILT:
+        pages += build_language(code)
+    for k in js_keys():
+        SOURCE.setdefault(k, []).append("book.js")
+    I18N.mkdir(parents=True, exist_ok=True)
+    (I18N / "_source.json").write_text(json.dumps(dict(sorted(SOURCE.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    for code, _, _ in LANGS[1:]:
+        if code not in CATALOGS:
+            print(f"  {code}: no data/i18n/{code}.json yet, skipped")
+        else:
+            gaps = set(SOURCE) - {k for k in SOURCE if i18n.lookup(CATALOGS[code], k) is not None}
+            if gaps:
+                print(f"  {code}: {len(gaps)} strings not translated (shown in English)")
     base = SITE["site_url"].rstrip("/")
     today = date.today().isoformat()
     urls = "".join(f"<url><loc>{base}/{p.replace('index.html', '')}</loc><lastmod>{today}</lastmod></url>" for p in pages)

@@ -52,8 +52,9 @@ export function estimate(data, request) {
   let needsQuote = false;
 
   const perPerson = (label, rate) => {
-    if (adults) lines.push({ label: `${label}: ${adults} × ${rate} JOD`, amount: rate * adults });
-    if (kids) lines.push({ label: `${label}, child 3-10: ${kids} × ${round(rate / 2)} JOD`, amount: (rate / 2) * kids });
+    // name/child/count/rate let the page show the line in the visitor's language.
+    if (adults) lines.push({ label: `${label}: ${adults} × ${rate} JOD`, name: label, child: false, count: adults, rate, amount: rate * adults });
+    if (kids) lines.push({ label: `${label}, child 3-10: ${kids} × ${round(rate / 2)} JOD`, name: label, child: true, count: kids, rate: round(rate / 2), amount: (rate / 2) * kids });
   };
 
   const rate = rateFor(programme, group, request.option);
@@ -82,7 +83,7 @@ export function estimate(data, request) {
     if (sg) perPerson("Stargazing add-on", sg.pricing.price);
   }
 
-  if (infants) lines.push({ label: `Children under 3: ${infants} × free`, amount: 0 });
+  if (infants) lines.push({ label: `Children under 3: ${infants} × free`, name: "Children under 3", free: true, count: infants, amount: 0 });
   if (programme.partner) notes.push("Balloon flights depend on the weather. Zayed will confirm availability.");
 
   const total = round(lines.reduce((s, l) => s + l.amount, 0));

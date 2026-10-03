@@ -2,6 +2,15 @@
 import { estimate } from "./pricing.js";
 
 const data = JSON.parse(document.getElementById("tour-data").textContent);
+// Translations for text built here, keyed like tools/i18n.py: numbers become {0}, {1}...
+// The WhatsApp message itself stays in English for Zayed.
+const T = JSON.parse(document.getElementById("i18n").textContent);
+function tr(s) {
+  const nums = [];
+  const key = s.replace(/\s+/g, " ").trim().replace(/\d+(?:[.,]\d+)*/g, (n) => "{" + (nums.push(n) - 1) + "}");
+  const t = T[key];
+  return t === undefined ? s : t.replace(/\{(\d+)\}/g, (_, i) => nums[i]);
+}
 const form = document.getElementById("req");
 const WA = form.dataset.whatsapp;
 const $ = (id) => document.getElementById(id);
@@ -46,7 +55,7 @@ function syncStay(p) {
     const label = document.createElement("label");
     const input = Object.assign(document.createElement("input"), { type: "radio", name: "stay", value: o.id, checked: i === 0 });
     const span = document.createElement("span");
-    span.textContent = o.label;
+    span.textContent = tr(o.label);
     label.append(input, span);
     return label;
   }));
@@ -64,14 +73,18 @@ function renderEstimate() {
   const r = read();
   const est = estimate(data, { ...r, night: $("w-night").hidden ? null : r.night });
   const box = $("est");
-  if (!est.ok) { box.innerHTML = `<h3>Your price</h3><p class="empty">${est.error}</p>`; return est; }
-  const lines = est.lines.map((l) => `<li><span>${l.label}</span><span>${fmt(l.amount)} JOD</span></li>`).join("");
+  if (!est.ok) { box.innerHTML = `<h3>${tr("Your price")}</h3><p class="empty">${tr(est.error)}</p>`; return est; }
+  const label = (l) => l.name === undefined ? l.label // older cached pricing.js
+    : l.free
+    ? `${tr(l.name)}: ${l.count} × ${tr("free")}`
+    : `${tr(l.name)}${l.child ? tr(", child 3-10") : ""}: ${l.count} × ${fmt(l.rate)} JOD`;
+  const lines = est.lines.map((l) => `<li><span>${label(l)}</span><span>${fmt(l.amount)} JOD</span></li>`).join("");
   const total = est.needsQuote
-    ? `<div class="total"><span>Price</span><span>Zayed will quote</span></div>`
-    : `<div class="total"><span>Total</span><span>${fmt(est.total)} JOD<br><small>about $${est.usd}</small></span></div>`;
+    ? `<div class="total"><span>${tr("Price")}</span><span>${tr("Zayed will quote")}</span></div>`
+    : `<div class="total"><span>${tr("Total")}</span><span>${fmt(est.total)} JOD<br><small>${tr("about $" + est.usd)}</small></span></div>`;
   const notes = [...est.notes, "This is an estimate. Zayed confirms the final price on WhatsApp. Pay in cash on arrival."]
-    .map((n) => `<p>${n}</p>`).join("");
-  box.innerHTML = `<h3>Your price</h3><ul class="lines">${lines}</ul>${total}<div class="notes">${notes}</div>`;
+    .map((n) => `<p>${tr(n)}</p>`).join("");
+  box.innerHTML = `<h3>${tr("Your price")}</h3><ul class="lines">${lines}</ul>${total}<div class="notes">${notes}</div>`;
   return est;
 }
 
@@ -113,11 +126,11 @@ form.addEventListener("submit", (ev) => {
   const r = read();
   const est = renderEstimate();
   const missing = [];
-  if (!r.date) missing.push("a date");
-  if (!est.ok) missing.push("at least one guest aged 3 or over");
-  if (!r.name) missing.push("your name");
+  if (!r.date) missing.push("Please choose a date.");
+  if (!est.ok) missing.push("Please add at least one guest aged 3 or over.");
+  if (!r.name) missing.push("Please add your name.");
   const err = $("err");
-  if (missing.length) { err.textContent = "Please add " + missing.join(", ") + "."; err.hidden = false; return; }
+  if (missing.length) { err.textContent = missing.map(tr).join(" "); err.hidden = false; return; }
   err.hidden = true;
   const text = message(r, est);
   $("msg").textContent = text;
@@ -128,8 +141,8 @@ form.addEventListener("submit", (ev) => {
 
 function toast(t) { const el = $("toast"); el.textContent = t; el.hidden = false; clearTimeout(el._t); el._t = setTimeout(() => (el.hidden = true), 2200); }
 $("copy").addEventListener("click", async () => {
-  try { await navigator.clipboard.writeText($("msg").textContent); toast("Copied"); }
-  catch { const r = document.createRange(); r.selectNodeContents($("msg")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Text selected. Copy it with your keyboard."); }
+  try { await navigator.clipboard.writeText($("msg").textContent); toast(tr("Copied")); }
+  catch { const r = document.createRange(); r.selectNodeContents($("msg")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast(tr("Text selected. Copy it with your keyboard.")); }
 });
 
 sync();

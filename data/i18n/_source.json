@@ -1,0 +1,2456 @@
+{
+ "\"I'm Zayed, born and raised in Wadi Rum. My family has lived a nomadic Bedouin life in this desert for generations. I grew up in the desert, learning its landscapes, traditions, and way of life from my family.\"": [
+  "index.html",
+  "about.html"
+ ],
+ "+{0} JOD per person": [
+  "index.html",
+  "camp.html"
+ ],
+ ", child {0}-{1}": [
+  "book.js"
+ ],
+ "<0>Cash</0> on arrival": [
+  "index.html"
+ ],
+ "<0>Free</0> cancellation": [
+  "index.html"
+ ],
+ "<0>{0}</0> desert programmes": [
+  "index.html"
+ ],
+ "A Bedouin camp in Wadi Rum, run by Zayed and his brothers. Every overnight tour includes a tent, dinner and breakfast.": [
+  "camp.html"
+ ],
+ "A Bedouin family in Wadi Rum": [
+  "about.html"
+ ],
+ "A Bedouin tent, a deluxe tent with a private bathroom, or a mattress under the open sky.": [
+  "index.html"
+ ],
+ "A NIGHT AT DESERT TREE CAMP": [
+  "index.html"
+ ],
+ "A bathroom at camp": [
+  "camp.html"
+ ],
+ "A black-and-white striped Bedouin tent": [
+  "index.html",
+  "camp.html"
+ ],
+ "A complete private trekking experience.": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "A deluxe tent with a glass front": [
+  "index.html",
+  "camp.html"
+ ],
+ "A full day in the jeep covering the main highlights of Wadi Rum. There is time to explore on foot, climb up for the views and take as many photos as you like, with lunch in the desert along the way.": [
+  "tours/full-day-jeep-tour.html"
+ ],
+ "A full-day jeep tour, a day hiking Al-Hash Mountain, Wadi Sabat and Nagza, one night at camp and one night under the stars.": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "A hat, sunscreen and sunglasses for the day, comfortable closed shoes, and a warm layer. Desert nights are cold, especially from November to March.": [
+  "index.html",
+  "about.html"
+ ],
+ "A hiker on a ridge above the desert": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "A hot air balloon ride over the Wadi Rum desert, with wide views of the mountains and dunes from above in a peaceful, unique atmosphere. Flights start around sunrise.": [
+  "tours/hot-air-balloon.html"
+ ],
+ "A jeep and hiking adventure to Jabal Burdah and its famous rock bridge, one of the most impressive natural arches in Wadi Rum. The climb involves steep sections and some scrambling, and the views from the top reach across the mountains.": [
+  "tours/jabal-burdah-adventure.html"
+ ],
+ "A programme planned around you": [
+  "tours/multi-adventure.html"
+ ],
+ "A saddled camel at the camp": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "A steep summit hike. Tell us your experience and we'll advise.": [
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "A team member who cooks and sets up camp": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "About us": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "About us · Desert Tree Camp & Tours": [
+  "about.html"
+ ],
+ "Abu Khashaba Canyon": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Abu Khashaba Valley and a short hike": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Accommodation": [
+  "book.html"
+ ],
+ "Activities to choose from": [
+  "tours/multi-adventure.html"
+ ],
+ "Add at least one guest aged {0} or over.": [
+  "book.js"
+ ],
+ "Add the {0}-hour stargazing experience ({1} JOD per person)": [
+  "book.html"
+ ],
+ "Adults and children over {0}": [
+  "book.html"
+ ],
+ "After coming down, spend the night at camp.": [
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "After dinner": [
+  "tours/stargazing.html"
+ ],
+ "After dinner we drive to a quiet place away from the camp lights, where the desert sky is at its darkest. Two hours to lie back and watch the stars, with the Milky Way overhead on clear nights.": [
+  "tours/stargazing.html"
+ ],
+ "After the hike, spend the night camping in the desert.": [
+  "tours/jabal-burdah-adventure.html"
+ ],
+ "Al-Hash Mountain hike, Wadi Sabat and Nagza": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "All Desert Tree Camp & Tours programmes in Wadi Rum: jeep tours with overnight, Jabal Burdah, Umm ad Dami, {0}- to {1}-day desert adventures, camel rides, stargazing and hot air balloon, with prices.": [
+  "tours.html"
+ ],
+ "All meals": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "All tours": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "All year round, and you can book at any time.": [
+  "index.html",
+  "about.html"
+ ],
+ "Amman": [
+  "book.html"
+ ],
+ "An afternoon among Wadi Rum's best-known sights, then sunset, dinner and a night at camp.": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/multi-adventure.html"
+ ],
+ "Ancient rock inscriptions": [
+  "index.html"
+ ],
+ "Anything else?": [
+  "book.html"
+ ],
+ "Aqaba": [
+  "book.html"
+ ],
+ "Ask on WhatsApp": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Ask us": [
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "Balloon flight with our local partner": [
+  "tours/hot-air-balloon.html"
+ ],
+ "Balloon flights are run with a trusted local partner and depend on the weather, so we'll confirm availability for your date.": [
+  "tours/hot-air-balloon.html"
+ ],
+ "Balloon flights depend on the weather. Zayed will confirm availability.": [
+  "book.js"
+ ],
+ "Bedouin guide": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Bedouin lunch in the desert": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Bedouin tea and snacks": [
+  "index.html"
+ ],
+ "Bedouin tea on a summit with a view over Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Bedouin tent": [
+  "book.html"
+ ],
+ "Bedouin tent, shared bathroom": [
+  "index.html",
+  "camp.html",
+  "book.js"
+ ],
+ "Bedouin-run camp & tours in Wadi Rum": [
+  "index.html"
+ ],
+ "Bedouin-run camp and desert tours in Wadi Rum. Run by Zayed and his brothers in Wadi Rum Village, Aqaba Governorate, Jordan.": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Before you come": [
+  "index.html",
+  "about.html"
+ ],
+ "Blankets under the night sky in the desert": [
+  "index.html",
+  "camp.html"
+ ],
+ "Book this tour": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Book your stay": [
+  "camp.html"
+ ],
+ "Book your trip": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Book your trip · Desert Tree Camp & Tours": [
+  "book.html"
+ ],
+ "Breakfast at the camp": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Breakfast in the desert": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Breakfast, lunch and dinner every day (traditional Bedouin meals)": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Breakfast, then deep into the desert for the day": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Breakfast, then on to the less-visited areas of Wadi Rum": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Breakfasts, lunches and dinners": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Build your own": [
+  "index.html",
+  "tours.html"
+ ],
+ "Built around you": [
+  "tours/multi-adventure.html"
+ ],
+ "Burdah Bridge": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Camel Ride": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "book.js"
+ ],
+ "Camel Ride · Desert Tree Camp & Tours": [
+  "tours/camel-ride.html"
+ ],
+ "Camel and Bedouin guide": [
+  "tours/camel-ride.html"
+ ],
+ "Camel ride length": [
+  "book.html"
+ ],
+ "Camel riding": [
+  "index.html",
+  "tours.html",
+  "tours/multi-adventure.html"
+ ],
+ "Camp location on Google Maps": [
+  "camp.html"
+ ],
+ "Camping in a different desert location each night": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Can I cancel?": [
+  "index.html",
+  "about.html"
+ ],
+ "Can't choose just one? Tell us how much time you have and what you'd like to do, and we'll build a programme for you: a jeep tour, long-distance hiking, mountain climbing, camel riding, sandboarding, or a mix of them all.": [
+  "index.html",
+  "tours.html",
+  "tours/multi-adventure.html"
+ ],
+ "Candle-lit seating in a rock shelter": [
+  "index.html"
+ ],
+ "Check prices and send a booking request to Desert Tree Camp & Tours on WhatsApp. Pay in cash on arrival, free cancellation.": [
+  "book.html"
+ ],
+ "Children aged {0}–{1}": [
+  "book.html"
+ ],
+ "Children under {0}": [
+  "book.html",
+  "book.js"
+ ],
+ "Children under {0} are free. Children from {1} to {2} years old pay half price, and from {3} they pay the adult price.": [
+  "index.html",
+  "about.html"
+ ],
+ "Children under {0} go free, and children aged {1}–{2} pay half price.": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "Choose a programme.": [
+  "book.js"
+ ],
+ "Choose a short ride of {0} minutes or an hour, a longer two-hour ride, or a full day on camelback. Sunrise and sunset are the most beautiful times, but we can arrange the ride whenever suits you.": [
+  "tours/camel-ride.html"
+ ],
+ "Choose a tour": [
+  "index.html"
+ ],
+ "Choose a tour and the number of guests.": [
+  "book.html"
+ ],
+ "Choose two nights at the camp, or spend the second night in a natural desert cave. The cave is a simple, authentic desert experience: no electricity and no tent, just complete silence and the stars.": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Choose your desert journey": [
+  "index.html"
+ ],
+ "Choose your option when you book. The extra cost is per person, and children aged {0}–{1} pay half.": [
+  "camp.html"
+ ],
+ "Clean showers at camp, so you can wash off the desert dust.": [
+  "camp.html"
+ ],
+ "Climb Jabal Umm ad Dami, the highest mountain in Jordan at {0} m, with views across the desert in every direction.": [
+  "index.html",
+  "tours.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Close": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Combine jeep touring, long-distance hiking, mountain climbing, camel riding and sandboarding in one trip, planned around your time.": [
+  "tours/multi-adventure.html"
+ ],
+ "Coming from": [
+  "book.html"
+ ],
+ "Contact": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Copied": [
+  "book.js"
+ ],
+ "Copy text": [
+  "book.html"
+ ],
+ "Country": [
+  "book.html"
+ ],
+ "Cross red sand by jeep, climb to rock bridges and summits, ride camels at sunrise and sleep beneath more stars than you have ever seen. Zayed and his brothers were born here, and they'll show you their desert.": [
+  "index.html"
+ ],
+ "Date": [
+  "book.html"
+ ],
+ "Day by day": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Day tour + {0} night": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html"
+ ],
+ "Day tour to the white desert with a local guide": [
+  "tours/white-desert-experience.html"
+ ],
+ "Day {0} is a long hiking day. Tell us your experience and we'll advise.": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Day {0}: Al-Hash Mountain, Wadi Sabat and Nagza": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Day {0}: Breakfast and departure": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Day {0}: Full-day jeep tour": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Day {0}: Full-day jeep tour of Wadi Rum": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Day {0}: Jabal Al-Hash and the White Desert": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Day {0}: Wadi Sabet and remote valleys": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Deluxe tent (+{0} JOD)": [
+  "book.html"
+ ],
+ "Deluxe tent, private bathroom": [
+  "index.html",
+  "camp.html",
+  "book.js"
+ ],
+ "Desert Tree Camp": [
+  "camp.html"
+ ],
+ "Desert Tree Camp & Tours, home": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Desert Tree Camp in Wadi Rum: Bedouin tents with shared bathroom, deluxe tents with private bathroom, or sleeping under the stars. Hot showers and Western-style toilets.": [
+  "camp.html"
+ ],
+ "Desert Tree Camp on Google Maps": [
+  "about.html"
+ ],
+ "Desert Tree Camp seen from the rocks above": [
+  "index.html"
+ ],
+ "Desert experiences": [
+  "index.html",
+  "tours.html"
+ ],
+ "Details →": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Dinner and a night under the stars, away from the camp lights": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Dinner and breakfast": [
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Dinner and breakfast are included with every overnight stay.": [
+  "camp.html"
+ ],
+ "Dinner and overnight at the camp": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Dinner at camp": [
+  "camp.html"
+ ],
+ "Dinner by the fire": [
+  "camp.html"
+ ],
+ "Dinner by the fire, tea in the majlis, and a desert that changes colour every hour.": [
+  "index.html"
+ ],
+ "Dinner spread at camp": [
+  "index.html"
+ ],
+ "Do children pay?": [
+  "index.html",
+  "about.html"
+ ],
+ "Drinking water and Bedouin tea": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "Drive and hike to Jabal Burdah and climb up to its famous rock bridge, high above the desert floor.": [
+  "index.html",
+  "tours.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Driver and support vehicle for luggage and equipment": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Duration": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Evening light over the desert": [
+  "index.html"
+ ],
+ "Every overnight programme includes a Bedouin tent with a shared bathroom, dinner and breakfast. The full-day jeep tour also includes lunch.": [
+  "index.html",
+  "about.html"
+ ],
+ "Experience Wadi Rum on foot with a local Bedouin guide and a support team. Spend four days exploring the desert, mountains, valleys and hidden areas while walking through the heart of Wadi Rum.": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Experience the beauty of Wadi Rum through a full-day jeep tour, mountain hiking, Bedouin culture and a night under the stars.": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Experience the hidden side of Wadi Rum with local Bedouin guides, exploring mountains, white desert landscapes and remote valleys, and sleeping under the stars.": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Explore Wadi Rum by {0}x{1} with a local Bedouin guide, then spend the night at our camp.": [
+  "index.html",
+  "tours.html"
+ ],
+ "Explore the tours": [
+  "index.html"
+ ],
+ "Explore the white desert areas of Wadi Rum, where the sand turns pale and the rocks take on unusual shapes. It is a very different landscape from the classic red desert, and far quieter.": [
+  "tours/white-desert-experience.html"
+ ],
+ "Family": [
+  "index.html"
+ ],
+ "Fill in a few details to see the price, then send your request to Zayed on WhatsApp. Nothing is booked until we confirm, and you pay in cash when you arrive.": [
+  "book.html"
+ ],
+ "Find us": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Finish the day with a night at camp, or sleep out under the stars.": [
+  "tours/white-desert-experience.html"
+ ],
+ "Fireplace in the Bedouin majlis tent": [
+  "index.html"
+ ],
+ "Fitness": [
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "Flexible": [
+  "tours/multi-adventure.html"
+ ],
+ "Float over the desert at sunrise and see the mountains and dunes from above.": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "For a group of {0}, Zayed will send you a price.": [
+  "book.js"
+ ],
+ "For group sizes marked 'Ask us', we'll send you a price.": [
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "For walkers and climbers: rock bridges, summits and long trails between the mountains.": [
+  "index.html",
+  "tours.html"
+ ],
+ "Four days walking through the heart of Wadi Rum with a Bedouin guide, a support vehicle and a team who cook and set up camp.": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "Free": [
+  "book.html"
+ ],
+ "Free time to enjoy the peaceful surroundings": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "From": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "From a {0}-minute camel ride to four days of trekking across the open desert.": [
+  "index.html"
+ ],
+ "From your first message to the campfire": [
+  "index.html"
+ ],
+ "From {0} JOD <0>≈ ${1}</0>": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Full day": [
+  "book.html"
+ ],
+ "Full day + {0} night": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Full day<0/><1>plus a camel for the guide</1>": [
+  "tours/camel-ride.html"
+ ],
+ "Full-Day Jeep Tour": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Full-Day Jeep Tour + Overnight": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "book.js"
+ ],
+ "Full-Day Jeep Tour + Overnight · Desert Tree Camp & Tours": [
+  "tours/full-day-jeep-tour.html"
+ ],
+ "Full-day camel ride: plus a camel for the guide. Zayed will confirm the price.": [
+  "book.js"
+ ],
+ "Full-day jeep tour": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Full-day jeep tour ({0}–{1} hours)": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Full-day jeep tour with a local guide": [
+  "tours/full-day-jeep-tour.html"
+ ],
+ "Good to know": [
+  "index.html",
+  "about.html"
+ ],
+ "Group size": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "Guest reviews": [
+  "index.html"
+ ],
+ "Half day + {0} night": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/multi-adventure.html"
+ ],
+ "Half price": [
+  "book.html"
+ ],
+ "Half-Day Jeep Tour": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Half-Day Jeep Tour + Overnight": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/multi-adventure.html",
+  "book.js"
+ ],
+ "Half-Day Jeep Tour + Overnight · Desert Tree Camp & Tours": [
+  "tours/half-day-jeep-tour.html"
+ ],
+ "Half-day jeep tour with a local guide": [
+  "tours/half-day-jeep-tour.html"
+ ],
+ "Hike through the mountains and desert valleys": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Hike to the top of Jabal Umm ad Dami, deep in the south of Wadi Rum.": [
+  "index.html"
+ ],
+ "Hiking and exploring": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Hiking with a Bedouin guide on Al-Hash Mountain": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Home": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Hot Air Balloon Experience": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "book.js"
+ ],
+ "Hot Air Balloon Experience · Desert Tree Camp & Tours": [
+  "tours/hot-air-balloon.html"
+ ],
+ "Hot showers": [
+  "camp.html"
+ ],
+ "How do I get to Wadi Rum?": [
+  "index.html",
+  "about.html"
+ ],
+ "How do I pay?": [
+  "index.html",
+  "about.html"
+ ],
+ "How fit do I need to be?": [
+  "index.html",
+  "about.html"
+ ],
+ "How to book": [
+  "index.html"
+ ],
+ "If WhatsApp doesn't open, copy the text and send it to +{0} {1} {2} {3}.": [
+  "book.html"
+ ],
+ "In cash when you arrive. There is nothing to pay online.": [
+  "index.html",
+  "about.html"
+ ],
+ "In the evening we find a good spot to watch the sunset, then drive back to camp for dinner by the fire. Spend the night in a Bedouin tent, or sleep out under the stars.": [
+  "tours/full-day-jeep-tour.html"
+ ],
+ "Included in the tour price. Single, double, triple and family tents.": [
+  "index.html",
+  "camp.html"
+ ],
+ "Included in your tour": [
+  "index.html",
+  "camp.html"
+ ],
+ "Includes a Bedouin tent with a shared bathroom. Deluxe tent with private bathroom or sleeping under the stars: +{0} JOD per person.": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Inside a deluxe tent": [
+  "index.html",
+  "camp.html"
+ ],
+ "It's in English, so Zayed can read it straight away.": [
+  "book.html"
+ ],
+ "Jabal Al-Hash": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Jabal Burdah Adventure": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Jabal Burdah Adventure + Overnight": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "book.js"
+ ],
+ "Jabal Burdah Adventure + Overnight · Desert Tree Camp & Tours": [
+  "tours/jabal-burdah-adventure.html"
+ ],
+ "Jabal Umm ad Dami is the highest mountain in Jordan. This adventure combines a jeep ride deep into the south of Wadi Rum with a hike to the summit, where the desert stretches out in every direction.": [
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Jeep + hike + {0} night": [
+  "index.html",
+  "tours.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Jeep + summit + {0} night": [
+  "index.html",
+  "tours.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Jeep tour": [
+  "index.html",
+  "tours.html",
+  "tours/multi-adventure.html"
+ ],
+ "Jeep tours & overnight": [
+  "index.html",
+  "tours.html"
+ ],
+ "Jeep tours, camel rides and stargazing suit everyone. Jabal Burdah and Umm ad Dami involve steep hiking and some scrambling, so tell us your experience and we'll advise.": [
+  "index.html",
+  "about.html"
+ ],
+ "Jeep tours, mountain hikes, camel rides and nights under the stars in Wadi Rum, Jordan, with a Bedouin family. Prices from {0} JOD, cash on arrival, free cancellation.": [
+  "index.html"
+ ],
+ "Jeep transfer and guided hike": [
+  "tours/jabal-burdah-adventure.html"
+ ],
+ "Jeep transfer and guided summit hike": [
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Jeep transport during the tours": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Jeeps parked at a desert viewpoint in Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Jordan's highest summit": [
+  "index.html"
+ ],
+ "Khazali Canyon": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Lawrence House": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Lawrence Spring": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Leave the red sand behind for Wadi Rum's pale white desert, with its strange rock formations and quiet, open landscapes.": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html"
+ ],
+ "Life at Desert Tree Camp": [
+  "index.html"
+ ],
+ "Little Bridge": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Long-distance hiking": [
+  "index.html",
+  "tours.html",
+  "tours/multi-adventure.html"
+ ],
+ "Looking out of a desert cave in Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "Looking out of a rock window in Wadi Rum": [
+  "index.html"
+ ],
+ "Lost in the desert?": [
+  "404.html"
+ ],
+ "Lunch, dinner and breakfast": [
+  "tours/full-day-jeep-tour.html"
+ ],
+ "Made for travellers with limited time. In three hours we visit some of the most beautiful places in Wadi Rum and finish with the sunset.": [
+  "tours/3-hour-jeep-tour.html"
+ ],
+ "Main": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Meet Zayed and his brothers": [
+  "index.html",
+  "about.html"
+ ],
+ "Meet Zayed and his brothers, a Bedouin family running Desert Tree Camp & Tours in Wadi Rum, Jordan.": [
+  "about.html"
+ ],
+ "Meet us in Wadi Rum": [
+  "index.html"
+ ],
+ "Meeting point": [
+  "about.html"
+ ],
+ "Meeting point on Google Maps": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Menu": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Message us on WhatsApp": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Modern toilets, shared or private depending on your tent.": [
+  "camp.html"
+ ],
+ "More about the camp": [
+  "index.html"
+ ],
+ "More exploring in the desert": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Mountain climbing": [
+  "index.html",
+  "tours.html",
+  "tours/multi-adventure.html"
+ ],
+ "Mountains & hiking": [
+  "index.html",
+  "tours.html"
+ ],
+ "Multi-Adventure Desert Experience": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/multi-adventure.html",
+  "book.js"
+ ],
+ "Multi-Adventure Desert Experience · Desert Tree Camp & Tours": [
+  "tours/multi-adventure.html"
+ ],
+ "Multi-day adventures": [
+  "index.html",
+  "tours.html"
+ ],
+ "Mushroom Rock": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Natural rock bridge in Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Next photo": [
+  "index.html"
+ ],
+ "Night {0} in a desert cave": [
+  "book.js"
+ ],
+ "Night {0}: natural desert cave under the stars": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Night {0}: private tent at the camp": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "No online payment and no booking fees. You send a request, we reply personally, and you pay in cash when you arrive.": [
+  "index.html"
+ ],
+ "Not decided yet": [
+  "book.html"
+ ],
+ "Option {0}: One night in a desert cave": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Option {0}: Two nights at the camp": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Optional: instead of returning to the camp, spend the night in a natural desert cave under the stars.": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Other": [
+  "book.html"
+ ],
+ "Our camp has hot showers and modern Western-style toilets. Choose how you'd like to sleep when you book.": [
+  "index.html"
+ ],
+ "Overnight at camp": [
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "Overnight at camp or under the stars": [
+  "tours/white-desert-experience.html"
+ ],
+ "Overnight in a Bedouin tent": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html"
+ ],
+ "Overnight in the desert": [
+  "tours/jabal-burdah-adventure.html"
+ ],
+ "Page not found · Desert Tree Camp & Tours": [
+  "404.html"
+ ],
+ "Page not found.": [
+  "404.html"
+ ],
+ "Pale sandstone rock formation in Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html"
+ ],
+ "Pay in cash on arrival. Free cancellation.": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Pay in cash when you arrive. Changed your plans? Cancelling is free.": [
+  "index.html"
+ ],
+ "Per person": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "Petra / Wadi Musa": [
+  "book.html"
+ ],
+ "Photo viewer": [
+  "index.html"
+ ],
+ "Photos": [
+  "index.html"
+ ],
+ "Pick a programme, or ask us to plan a mix of activities for the time you have.": [
+  "index.html"
+ ],
+ "Pick-up from Wadi Rum Village": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Pick-up in Wadi Rum Village": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Plan a custom trip": [
+  "index.html",
+  "tours.html"
+ ],
+ "Please add at least one guest aged {0} or over.": [
+  "book.js"
+ ],
+ "Please add your name.": [
+  "book.js"
+ ],
+ "Please choose a date.": [
+  "book.js"
+ ],
+ "Prefer to message directly?": [
+  "book.html"
+ ],
+ "Prepare my WhatsApp message": [
+  "book.html"
+ ],
+ "Previous photo": [
+  "index.html"
+ ],
+ "Price": [
+  "tours/multi-adventure.html",
+  "book.js"
+ ],
+ "Prices": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Prices are per person and drop as your group grows. Every overnight programme includes a Bedouin tent, dinner and breakfast.": [
+  "index.html"
+ ],
+ "Programmes to choose from": [
+  "index.html"
+ ],
+ "Read guest reviews": [
+  "index.html"
+ ],
+ "Read reviews from guests who have stayed with us.": [
+  "index.html"
+ ],
+ "Remote landscapes, hidden valleys and mountains": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Remote valleys and mountain formations": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Return to Wadi Rum Village": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Ride": [
+  "tours/camel-ride.html"
+ ],
+ "Run by": [
+  "tours/hot-air-balloon.html"
+ ],
+ "Run by Bedouin brothers": [
+  "index.html"
+ ],
+ "Sand dunes and sandboarding": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Sandboarding": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/multi-adventure.html"
+ ],
+ "Sandstone landscape in Wadi Rum": [
+  "tours/multi-adventure.html"
+ ],
+ "See us on Booking.com": [
+  "camp.html"
+ ],
+ "Send on WhatsApp": [
+  "book.html"
+ ],
+ "Send your request": [
+  "index.html"
+ ],
+ "Set off after lunch to explore some of Wadi Rum's main attractions by jeep, stopping to walk and take photos as the light turns warm.": [
+  "tours/half-day-jeep-tour.html"
+ ],
+ "Several hours of walking each day on sand and rocky trails. Tell us your experience and we'll advise.": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Short hikes and exploring": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Short hikes on days {0} and {1}. Fine for most people with normal fitness.": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Short on time? A {0}-hour drive to some of the most beautiful places in the desert, with sunset, dinner and a night at camp.": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/multi-adventure.html"
+ ],
+ "Shorter experiences on their own, or added to any tour.": [
+  "index.html",
+  "tours.html"
+ ],
+ "Silence and landscapes away from the busy tourist areas": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Single, double, triple and family tents.": [
+  "camp.html"
+ ],
+ "Skip to content": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Sleeping under the stars": [
+  "index.html",
+  "camp.html",
+  "book.js"
+ ],
+ "Sleeping under the stars (+{0} JOD)": [
+  "book.html"
+ ],
+ "Stargazing Experience": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "book.js"
+ ],
+ "Stargazing Experience · Desert Tree Camp & Tours": [
+  "tours/stargazing.html"
+ ],
+ "Stargazing add-on": [
+  "book.js"
+ ],
+ "Stargazing can be added to the end of any tour.": [
+  "tours/stargazing.html"
+ ],
+ "Starts": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "Steep hiking with some scrambling. Tell us your experience and we'll advise.": [
+  "tours/jabal-burdah-adventure.html"
+ ],
+ "Step four": [
+  "index.html"
+ ],
+ "Step one": [
+  "index.html"
+ ],
+ "Step three": [
+  "index.html"
+ ],
+ "Step two": [
+  "index.html"
+ ],
+ "Stone cairns along a desert trail in Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "Striped tents at the foot of the mountain": [
+  "index.html"
+ ],
+ "Sunrise flight": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "Sunrise, sunset or any time": [
+  "tours/camel-ride.html"
+ ],
+ "Sunset and Bedouin tea": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Sunset in the desert with Bedouin tea": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Sunset in the remote desert": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Sunset over the Wadi Rum desert": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/multi-adventure.html"
+ ],
+ "Sunset with traditional Bedouin tea": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Tell us what you would like to do and how much time you have, and we will send you a programme and a price on WhatsApp.": [
+  "tours/multi-adventure.html"
+ ],
+ "Tell us your date, how many people and where you'd like to sleep. It goes to us on WhatsApp.": [
+  "index.html"
+ ],
+ "Tents at the foot of the mountain": [
+  "camp.html"
+ ],
+ "Tents for every group": [
+  "camp.html"
+ ],
+ "Tents, sleeping and camping equipment": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Text selected. Copy it with your keyboard.": [
+  "book.js"
+ ],
+ "The Milky Way over a striped Bedouin tent at Desert Tree Camp": [
+  "index.html"
+ ],
+ "The Milky Way over the cliffs of Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "The Naghra and Al-Da'aa areas": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "The White Desert": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "The camp": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "The camp · Desert Tree Camp & Tours": [
+  "camp.html"
+ ],
+ "The campfire": [
+  "camp.html"
+ ],
+ "The campfire at night": [
+  "index.html"
+ ],
+ "The complete Wadi Rum in one day: red dunes, canyons and viewpoints, with time to walk, climb and take photos.": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "The desert, the way <0>the Bedouin know it</0>": [
+  "index.html"
+ ],
+ "The dining tent": [
+  "camp.html"
+ ],
+ "The hidden side of Wadi Rum: the famous sights by jeep, then Jabal Al-Hash, the White Desert and the remote valleys of Wadi Sabet.": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "The jeep and guide cost the same for one person or several, so the price per person drops as your group grows.": [
+  "index.html",
+  "about.html"
+ ],
+ "The mushroom rock in Wadi Rum": [
+  "index.html"
+ ],
+ "Then it's dinner at camp and a night in the desert, with breakfast in the morning before you go.": [
+  "tours/3-hour-jeep-tour.html"
+ ],
+ "This is an estimate. Zayed confirms the final price on WhatsApp. Pay in cash on arrival.": [
+  "book.js"
+ ],
+ "This page doesn't exist. Head back to the start, or see all our tours.": [
+  "404.html"
+ ],
+ "This programme is planned around you. Zayed will send you a price.": [
+  "book.js"
+ ],
+ "Three ways to spend the night": [
+  "index.html",
+  "camp.html"
+ ],
+ "Today, I run our camp together with my brothers. With years of experience in managing desert tours and our camp, we care about every detail and always want our guests to leave with beautiful memories that stay with them long after they leave Wadi Rum.": [
+  "index.html",
+  "about.html"
+ ],
+ "Total": [
+  "book.js"
+ ],
+ "Tour": [
+  "book.html"
+ ],
+ "Tours": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Tours in Wadi Rum": [
+  "tours.html"
+ ],
+ "Tours in Wadi Rum · Desert Tree Camp & Tours": [
+  "tours.html"
+ ],
+ "Traditional Bedouin dinner and overnight at the camp": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Traditional desert lunch": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Travel the desert the way Bedouin families have for generations. Ride at sunrise, at sunset or at a time that suits you.": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "Twelve programmes, from a short camel ride to four days of trekking, plus custom trips. Prices are per person and drop as your group grows.": [
+  "tours.html"
+ ],
+ "Two hours in a quiet spot far from the camp lights, where the Milky Way stretches across the sky. Add it to any tour.": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "Two nights at the camp": [
+  "book.js"
+ ],
+ "Two to four days in the desert with a Bedouin guide, deep into the quiet parts of Wadi Rum.": [
+  "index.html",
+  "tours.html"
+ ],
+ "Umm Fruth Bridge": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Umm ad Dami Adventure": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Umm ad Dami Adventure + Overnight": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "book.js"
+ ],
+ "Umm ad Dami Adventure + Overnight · Desert Tree Camp & Tours": [
+  "tours/umm-ad-dami-adventure.html"
+ ],
+ "View over the sand and mountains of Wadi Rum": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/multi-adventure.html"
+ ],
+ "Village ↔ camp transport": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Village ↔ desert transport": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Visit Wadi Sabat and Nagza": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Wadi Rum Village": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Wadi Rum Village is about an hour's drive from Aqaba and around two hours from Petra. We meet you in the village. The exact meeting point is on Google Maps, and we'll confirm it on WhatsApp.": [
+  "index.html",
+  "about.html"
+ ],
+ "Wadi Rum Village · {0}° N, {1}° E": [
+  "about.html"
+ ],
+ "Wadi Rum is not a place to rush through. Its canyons, dunes and sandstone mountains change colour from hour to hour, and the best of it is found slowly, with someone who knows the way. Spend a day exploring, share a meal by the fire, then sleep in the silence of the desert.": [
+  "index.html"
+ ],
+ "Wadi Sabet": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "Watch the sunset over the desert, then settle in at camp for dinner, the fire and a quiet night.": [
+  "tours/half-day-jeep-tour.html"
+ ],
+ "Ways to spend the night": [
+  "index.html"
+ ],
+ "We confirm": [
+  "index.html"
+ ],
+ "We meet guests in Wadi Rum Village and drive together to the camp. Send us a message and we'll confirm the time.": [
+  "about.html"
+ ],
+ "We'll send you a price for your programme on WhatsApp.": [
+  "tours/multi-adventure.html"
+ ],
+ "Website by Jeevesh": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "Welcome to our desert": [
+  "index.html"
+ ],
+ "Western-style toilets": [
+  "camp.html"
+ ],
+ "What is included in the price?": [
+  "index.html",
+  "about.html"
+ ],
+ "What our guests say": [
+  "index.html"
+ ],
+ "What should I bring?": [
+  "index.html",
+  "about.html"
+ ],
+ "What's included": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "WhatsApp Zayed any time. Replies usually come the same day.": [
+  "book.html"
+ ],
+ "When are you open?": [
+  "index.html",
+  "about.html"
+ ],
+ "Where we meet you": [
+  "about.html"
+ ],
+ "Where would you like to sleep?": [
+  "book.html"
+ ],
+ "Where you sleep": [
+  "camp.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "White Desert Experience": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "White Desert Experience + Overnight": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "book.js"
+ ],
+ "White Desert Experience + Overnight · Desert Tree Camp & Tours": [
+  "tours/white-desert-experience.html"
+ ],
+ "Why is the price lower for groups?": [
+  "index.html",
+  "about.html"
+ ],
+ "Yes. Because you pay on arrival, cancelling is free. Just send us a message so we can plan.": [
+  "index.html",
+  "about.html"
+ ],
+ "You might also like": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "You spend the first night at our camp and the second in a quiet desert spot, away from the camp lights.": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "Your guide walks with you every day, while the support vehicle carries your luggage and equipment. Another member of the team prepares your meals and sets up your sleeping area each evening, in a different desert location every night.": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "Your hosts": [
+  "index.html",
+  "about.html"
+ ],
+ "Your message to Zayed": [
+  "book.html"
+ ],
+ "Your name": [
+  "book.html"
+ ],
+ "Your price": [
+  "book.html",
+  "book.js"
+ ],
+ "Zayed and his brothers grew up in this desert, like their family before them.": [
+  "index.html"
+ ],
+ "Zayed and his brothers run Desert Tree Camp & Tours in the desert where their family has lived for generations.": [
+  "about.html"
+ ],
+ "Zayed replies personally to confirm your date, the price and the meeting point.": [
+  "index.html"
+ ],
+ "Zayed will quote": [
+  "book.js"
+ ],
+ "Zayed with a young camel in Wadi Rum": [
+  "index.html",
+  "about.html"
+ ],
+ "Zayed<0/>Desert Tree Camp & Tours": [
+  "index.html",
+  "about.html"
+ ],
+ "about ${0}": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "book.js"
+ ],
+ "free": [
+  "book.js"
+ ],
+ "on request": [
+  "tours/multi-adventure.html"
+ ],
+ "our local partner": [
+  "tours/hot-air-balloon.html"
+ ],
+ "per person": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "per person, {0} minutes ride": [
+  "index.html",
+  "tours.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "per person, {0} people": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "per person, {0}+ people": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html"
+ ],
+ "per person, {0}–{1} people": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0} JOD": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "{0} JOD extra per person, dinner and breakfast included.": [
+  "index.html",
+  "camp.html"
+ ],
+ "{0} JOD extra per person.": [
+  "index.html",
+  "camp.html"
+ ],
+ "{0} JOD per person": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "{0} days + {1} nights": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0} days of desert tours": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "{0} days of trekking with a Bedouin hiking guide": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0} days on foot": [
+  "index.html",
+  "tours.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0} hour": [
+  "book.html",
+  "tours/camel-ride.html"
+ ],
+ "{0} hours": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "{0} hours + {1} night": [
+  "index.html",
+  "tours.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/multi-adventure.html"
+ ],
+ "{0} hours with a guide, away from the camp lights": [
+  "tours/stargazing.html"
+ ],
+ "{0} m": [
+  "index.html"
+ ],
+ "{0} min to full day": [
+  "index.html",
+  "tours.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "{0} minutes": [
+  "book.html",
+  "tours/camel-ride.html"
+ ],
+ "{0} night at camp + {1} night under the stars": [
+  "tours/two-day-desert-adventure.html"
+ ],
+ "{0} nights: camp, or camp + desert cave": [
+  "tours/three-day-desert-adventure.html"
+ ],
+ "{0} people": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0} person": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0}+ people": [
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0}-Day Wadi Rum Adventure": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "book.js",
+  "book.js"
+ ],
+ "{0}-Day Wadi Rum Adventure · Desert Tree Camp & Tours": [
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "{0}-Day Wadi Rum Desert Trek": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "book.js"
+ ],
+ "{0}-Day Wadi Rum Desert Trek · Desert Tree Camp & Tours": [
+  "tours/four-day-desert-trek.html"
+ ],
+ "{0}-Hour Jeep Tour": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ],
+ "{0}-Hour Jeep Tour + Overnight": [
+  "index.html",
+  "tours.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/multi-adventure.html",
+  "book.js"
+ ],
+ "{0}-Hour Jeep Tour + Overnight · Desert Tree Camp & Tours": [
+  "tours/3-hour-jeep-tour.html"
+ ],
+ "{0}-hour jeep tour with a local guide": [
+  "tours/3-hour-jeep-tour.html"
+ ],
+ "{0}:{1} AM": [
+  "tours/full-day-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/hot-air-balloon.html"
+ ],
+ "{0}:{1} PM": [
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html"
+ ],
+ "{0}–{1} people": [
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/three-day-desert-adventure.html"
+ ],
+ "© {0} Desert Tree Camp & Tours · Wadi Rum, Jordan": [
+  "index.html",
+  "tours.html",
+  "camp.html",
+  "about.html",
+  "book.html",
+  "tours/full-day-jeep-tour.html",
+  "tours/half-day-jeep-tour.html",
+  "tours/3-hour-jeep-tour.html",
+  "tours/white-desert-experience.html",
+  "tours/jabal-burdah-adventure.html",
+  "tours/umm-ad-dami-adventure.html",
+  "tours/two-day-desert-adventure.html",
+  "tours/three-day-desert-adventure.html",
+  "tours/four-day-desert-trek.html",
+  "tours/camel-ride.html",
+  "tours/stargazing.html",
+  "tours/hot-air-balloon.html",
+  "tours/multi-adventure.html",
+  "404.html"
+ ]
+}

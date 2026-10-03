@@ -6,10 +6,16 @@
     btn.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
-      btn.textContent = open ? "Close" : "Menu";
+      btn.textContent = open ? btn.dataset.close : btn.dataset.menu;
     });
   }
-  function draw() { if (window.drawAll) window.drawAll(); }
+  // Close the language list when clicking elsewhere or pressing Esc.
+  var langs = document.querySelector("details.langs");
+  if (langs) {
+    document.addEventListener("click", function (ev) { if (!langs.contains(ev.target)) langs.open = false; });
+    document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") langs.open = false; });
+  }
+    function draw() { if (window.drawAll) window.drawAll(); }
   var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
   ready.then(function () { draw(); document.body.setAttribute("data-ready", "1"); });
   var t;

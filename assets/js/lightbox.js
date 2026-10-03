@@ -11,14 +11,16 @@
     return n;
   }
 
-  var dlg = el("dialog", "lightbox", { "aria-label": "Photo viewer" });
+  // Labels come from the gallery's data attributes, so they follow the page language.
+  var L = document.querySelector(".gallery").dataset;
+  var dlg = el("dialog", "lightbox", { "aria-label": L.viewer });
   var img = el("img", "", { alt: "" });
   var cap = el("p", "lb-cap");
   var count = el("span", "lb-count");
   var text = el("span");
-  var prev = el("button", "lb-prev", { type: "button", "aria-label": "Previous photo" });
-  var next = el("button", "lb-next", { type: "button", "aria-label": "Next photo" });
-  var close = el("button", "lb-close", { type: "button", "aria-label": "Close" });
+  var prev = el("button", "lb-prev", { type: "button", "aria-label": L.prev });
+  var next = el("button", "lb-next", { type: "button", "aria-label": L.next });
+  var close = el("button", "lb-close", { type: "button", "aria-label": L.close });
   prev.textContent = "‹";
   next.textContent = "›";
   close.textContent = "×";

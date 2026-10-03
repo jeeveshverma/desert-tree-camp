@@ -15,6 +15,7 @@ It's plain HTML, CSS and a little JavaScript. There is no framework, no server a
 | `about.html` | Zayed and his family, meeting point, contact |
 | `book.html` | Booking form with a live price estimate. It writes the WhatsApp message |
 | `404.html` | Not-found page |
+| `<code>/…` | The same pages in each other language (`fr/`, `de/`, `it/`, `es/`, `nl/`, `pl/`, `ru/`, `zh/`, `ja/`, `ko/`) |
 
 ## How it's built
 
@@ -37,6 +38,27 @@ The HTML pages are generated, so **don't edit them by hand**. Change the data or
 ```bash
 python3 tools/build.py      # Python 3.8+, standard library only
 ```
+
+## Languages
+
+The site is written in English and built in 10 more languages: French, German, Italian, Spanish, Dutch, Polish, Russian, Chinese (Simplified), Japanese and Korean. English stays at the root; each language has its own folder (`fr/`, `de/`, …) with the same pages, a language switcher in the header, and `hreflang` links so search engines show the right version.
+
+```
+data/i18n/_source.json  ← every English string on the site (written by the build; don't edit)
+data/i18n/<code>.json   ← English string → translation, one file per language
+tools/i18n.py           ← swaps the text in each built English page for its translation
+tools/check_i18n.py     ← checks every language is complete and no placeholder is broken
+```
+
+Strings hide numbers and HTML behind placeholders, so a translation can't change a price or break a link: `From <b>40</b> JOD` becomes `From <0>{0}</0> JOD`. A translation must keep the same `{0}`, `<0>…</0>` and `<0/>` placeholders, in any order.
+
+**After changing any English text:** run `python3 tools/build.py`. New or changed strings show in English on the other languages, and the build lists how many are untranslated per language. Add them to each `data/i18n/<code>.json`, then run `python3 tools/check_i18n.py`.
+
+Messages sent to Zayed on WhatsApp are always in English, whatever language the guest is reading.
+
+The translations were machine-made. Ask a native speaker to read through each language when you can.
+
+To add a language: add it to `LANGS` in `tools/build.py`, create `data/i18n/<code>.json`, and rebuild.
 
 ## Run locally
 
@@ -93,7 +115,8 @@ Each programme has `"image": null` in `data/programmes.json`. Save the photo in 
 ## Waiting on Zayed
 
 - [ ] Languages the team speaks (for the About page)
-- [ ] Website languages besides English (French, German, Italian, Spanish?). No Arabic version is needed, but keep the small Arabic words and calligraphy
+- [x] Website languages besides English: done in 10 languages (see Languages). No Arabic version is needed, but keep the small Arabic words and calligraphy
+- [ ] Native speakers to check the translations
 - [ ] Facebook page link (`links.facebook` in `data/site.json`)
 - [ ] Google reviews link (`links.google_reviews`)
 - [ ] Whether Tripadvisor reviews can be shown (`links.tripadvisor`, currently off)
