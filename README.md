@@ -27,6 +27,7 @@ assets/js/art.js       ← the desert illustrations (drawn on <canvas>)
 assets/js/pricing.js   ← price calculator (pure functions, tested)
 assets/js/book.js      ← booking form
 assets/js/main.js      ← mobile menu, draws illustrations
+assets/js/lightbox.js  ← full-size photo viewer for the home-page gallery
 assets/fonts/          ← self-hosted fonts (SIL Open Font License)
 tests/                 ← price calculator tests
 ```
