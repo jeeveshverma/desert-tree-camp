@@ -222,6 +222,7 @@ footer h4{font:600 12.5px/1 var(--f-body);letter-spacing:.2em;text-transform:upp
 footer p,footer li{color:#cfc6db;font-size:15px}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 footer .base{border-top:1px solid rgba(230,192,122,.2);padding-block:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#978fab}
+footer .credit{text-align:center;font-size:11.5px;color:#978fab;opacity:.75;padding-bottom:16px}
 @media (max-width:860px){footer .wrap{grid-template-columns:1fr}}
 @media (max-width:560px){.form{grid-template-columns:1fr;padding:24px 18px}}
 

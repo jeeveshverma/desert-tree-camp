@@ -215,7 +215,7 @@ def footer(root):
       <p style="margin-top:12px"><a href="{SITE['meeting_point']['maps']}" target="_blank" rel="noopener">Meeting point on Google Maps</a></p>
     </div>
   </div>
-  <div class="wrap" style="display:block;padding-block:0"><div class="base"><span>© {date.today().year} Desert Tree Camp &amp; Tours · Wadi Rum, Jordan</span><span class="ar" lang="ar" style="font-size:17px;color:#c8963e">أهلاً وسهلاً في وادي رم</span></div></div>
+  <div class="wrap" style="display:block;padding-block:0"><div class="base"><span>© {date.today().year} Desert Tree Camp &amp; Tours · Wadi Rum, Jordan</span><span class="ar" lang="ar" style="font-size:17px;color:#c8963e">أهلاً وسهلاً في وادي رم</span></div><p class="credit">Website by Jeevesh</p></div>
 </footer>
 <script src="{root}assets/js/art.js" defer></script>
 <script src="{root}assets/js/main.js" defer></script>"""
