@@ -9,7 +9,7 @@ It's plain HTML, CSS and a little JavaScript. There is no framework, no server a
 | Page | What it is |
 |---|---|
 | `index.html` | Home: hero, all tours, overnight options, how to book, about Zayed, reviews, FAQ |
-| `tours.html` | All 10 programmes plus the custom Multi-Adventure |
+| `tours.html` | All 12 programmes plus the custom Multi-Adventure |
 | `tours/*.html` | One page per programme, with price table, start time, what's included |
 | `camp.html` | Tents (standard, deluxe, under the stars) and facilities |
 | `about.html` | Zayed and his family, meeting point, contact |
@@ -50,7 +50,7 @@ python3 -m http.server 8000
 node --test                 # Node 18+
 ```
 
-The tests check every price in `data/programmes.json` against what Zayed sent on WhatsApp (29–30 Sep 2026), and check the calculator's rules for groups, children and extras.
+The tests check every price in `data/programmes.json` against what Zayed sent on WhatsApp (29–30 Sep and 3 Oct 2026), and check the calculator's rules for groups, children and extras.
 
 ## Changing a price
 
@@ -97,6 +97,8 @@ Each programme has `"image": null` in `data/programmes.json`. Save the photo in 
 - [ ] Google reviews link (`links.google_reviews`)
 - [ ] Whether Tripadvisor reviews can be shown (`links.tripadvisor`, currently off)
 - [ ] Price of the guide's camel on the full-day camel ride
+- [ ] Prices for 5 or more people on the 2-, 3- and 4-day programmes (the site says "Ask us")
+- [ ] Start times for the 3- and 4-day programmes
 
 ## Assumptions to confirm with Zayed
 

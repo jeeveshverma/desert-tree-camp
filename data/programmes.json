@@ -47,6 +47,12 @@
       "blurb": "For walkers and climbers: rock bridges, summits and long trails between the mountains."
     },
     {
+      "id": "multiday",
+      "name": "Multi-day adventures",
+      "ar": "رحلات لعدة أيام",
+      "blurb": "Two to four days in the desert with a Bedouin guide, deep into the quiet parts of Wadi Rum."
+    },
+    {
       "id": "experience",
       "name": "Desert experiences",
       "ar": "تجارب صحراوية",
@@ -320,41 +326,273 @@
     },
     {
       "slug": "two-day-desert-adventure",
-      "group": "mountain",
-      "name": "Two-Day Desert Adventure",
+      "group": "multiday",
+      "name": "2-Day Wadi Rum Adventure",
       "scene": "ridge",
       "image": "assets/img/photos/two-day-hike-1600.jpg",
       "duration": "2 days + 2 nights",
-      "start": "10:00 AM",
-      "summary": "A full day by jeep and a long-distance hike on mountain trails such as Jabal Hash, with one night at camp and one under the stars.",
+      "start": "Pick-up in Wadi Rum Village",
+      "summary": "A full-day jeep tour, a day hiking Al-Hash Mountain, Wadi Sabat and Nagza, one night at camp and one night under the stars.",
       "description": [
-        "Two days to see Wadi Rum in a deeper, more peaceful way. The adventure combines a full-day jeep tour with a long-distance hike on mountain trails such as Jabal Hash.",
-        "You spend one night at camp and one night sleeping under the stars, far from everything."
+        "Experience the beauty of Wadi Rum through a full-day jeep tour, mountain hiking, Bedouin culture and a night under the stars.",
+        "You spend the first night at our camp and the second in a quiet desert spot, away from the camp lights."
+      ],
+      "itinerary": [
+        {
+          "title": "Day 1: Full-day jeep tour",
+          "items": [
+            "Pick-up from Wadi Rum Village",
+            "Full-day jeep tour (7–8 hours)",
+            "Lawrence Spring",
+            "Sand dunes and sandboarding",
+            "Khazali Canyon",
+            "Little Bridge",
+            "Lawrence House",
+            "Mushroom Rock",
+            "Burdah Bridge",
+            "Abu Khashaba Valley and a short hike",
+            "Umm Fruth Bridge",
+            "Sunset with traditional Bedouin tea",
+            "Dinner and overnight at the camp"
+          ]
+        },
+        {
+          "title": "Day 2: Al-Hash Mountain, Wadi Sabat and Nagza",
+          "items": [
+            "Breakfast at the camp",
+            "Hiking with a Bedouin guide on Al-Hash Mountain",
+            "Hike through the mountains and desert valleys",
+            "Visit Wadi Sabat and Nagza",
+            "Traditional desert lunch",
+            "More exploring in the desert",
+            "Sunset and Bedouin tea",
+            "Dinner and a night under the stars, away from the camp lights"
+          ]
+        },
+        {
+          "title": "Day 3: Breakfast and departure",
+          "items": [
+            "Breakfast in the desert",
+            "Free time to enjoy the peaceful surroundings",
+            "Return to Wadi Rum Village"
+          ]
+        }
       ],
       "includes": [
-        "Full-day jeep tour and long-distance guided hike",
-        "Dinner and breakfast each night",
-        "1 night at camp + 1 night under the stars"
+        "Full-day jeep tour",
+        "Al-Hash Mountain hike, Wadi Sabat and Nagza",
+        "1 night at camp + 1 night under the stars",
+        "All meals",
+        "Bedouin guide",
+        "Village ↔ camp transport",
+        "Drinking water and Bedouin tea",
+        "Sandboarding"
       ],
       "overnight": false,
-      "fitness": "Long hiking days. Tell us your experience and we'll advise.",
+      "fitness": "Day 2 is a long hiking day. Tell us your experience and we'll advise.",
       "pricing": {
         "type": "tiers",
         "tiers": [
           {
             "min": 1,
+            "max": 1,
+            "price": 200
+          },
+          {
+            "min": 2,
             "max": 2,
-            "price": 170
+            "price": 120
           },
           {
             "min": 3,
+            "max": 3,
+            "price": 90
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "price": 80
+          },
+          {
+            "min": 5,
             "max": null,
-            "price": 120
+            "price": null
           }
         ]
       },
       "image_pos": "40% 50%",
       "image_alt": "A hiker on a ridge above the desert"
+    },
+    {
+      "slug": "three-day-desert-adventure",
+      "group": "multiday",
+      "name": "3-Day Wadi Rum Adventure",
+      "scene": "white",
+      "image": "assets/img/photos/cave-window-1600.jpg",
+      "image_pos": "55% 50%",
+      "image_alt": "Looking out of a desert cave in Wadi Rum",
+      "duration": "3 days + 2 nights",
+      "start": "Pick-up in Wadi Rum Village",
+      "summary": "The hidden side of Wadi Rum: the famous sights by jeep, then Jabal Al-Hash, the White Desert and the remote valleys of Wadi Sabet.",
+      "description": [
+        "Experience the hidden side of Wadi Rum with local Bedouin guides, exploring mountains, white desert landscapes and remote valleys, and sleeping under the stars.",
+        "Choose two nights at the camp, or spend the second night in a natural desert cave. The cave is a simple, authentic desert experience: no electricity and no tent, just complete silence and the stars."
+      ],
+      "itinerary": [
+        {
+          "title": "Day 1: Full-day jeep tour of Wadi Rum",
+          "items": [
+            "Lawrence Spring",
+            "Khazali Canyon",
+            "Little Bridge",
+            "Lawrence House",
+            "Sand dunes and sandboarding",
+            "Mushroom Rock",
+            "Umm Fruth Bridge",
+            "Abu Khashaba Canyon",
+            "Sunset in the desert with Bedouin tea",
+            "Dinner and overnight at the camp"
+          ]
+        },
+        {
+          "title": "Day 2: Jabal Al-Hash and the White Desert",
+          "items": [
+            "Breakfast, then deep into the desert for the day",
+            "Jabal Al-Hash",
+            "The White Desert",
+            "Remote landscapes, hidden valleys and mountains",
+            "Bedouin lunch in the desert",
+            "Hiking and exploring",
+            "Sunset in the remote desert",
+            "Traditional Bedouin dinner and overnight at the camp"
+          ],
+          "note": "Optional: instead of returning to the camp, spend the night in a natural desert cave under the stars."
+        },
+        {
+          "title": "Day 3: Wadi Sabet and remote valleys",
+          "items": [
+            "Breakfast, then on to the less-visited areas of Wadi Rum",
+            "Wadi Sabet",
+            "The Naghra and Al-Da'aa areas",
+            "Remote valleys and mountain formations",
+            "Short hikes and exploring",
+            "Bedouin lunch in the desert",
+            "Silence and landscapes away from the busy tourist areas",
+            "Return to Wadi Rum Village"
+          ]
+        }
+      ],
+      "stay_options": [
+        {
+          "title": "Option 1: Two nights at the camp",
+          "items": [
+            "Night 1: private tent at the camp",
+            "Night 2: private tent at the camp"
+          ]
+        },
+        {
+          "title": "Option 2: One night in a desert cave",
+          "items": [
+            "Night 1: private tent at the camp",
+            "Night 2: natural desert cave under the stars"
+          ]
+        }
+      ],
+      "includes": [
+        "3 days of desert tours",
+        "2 nights: camp, or camp + desert cave",
+        "Jeep transport during the tours",
+        "Bedouin guide",
+        "Breakfasts, lunches and dinners",
+        "Drinking water and Bedouin tea",
+        "Sandboarding",
+        "Village ↔ desert transport"
+      ],
+      "overnight": false,
+      "fitness": "Short hikes on days 2 and 3. Fine for most people with normal fitness.",
+      "pricing": {
+        "type": "tiers",
+        "tiers": [
+          {
+            "min": 1,
+            "max": 1,
+            "price": 250
+          },
+          {
+            "min": 2,
+            "max": 2,
+            "price": 170
+          },
+          {
+            "min": 3,
+            "max": 4,
+            "price": 150
+          },
+          {
+            "min": 5,
+            "max": null,
+            "price": null
+          }
+        ]
+      }
+    },
+    {
+      "slug": "four-day-desert-trek",
+      "group": "multiday",
+      "name": "4-Day Wadi Rum Desert Trek",
+      "scene": "peak",
+      "image": "assets/img/photos/rock-cairns-1600.jpg",
+      "image_pos": "50% 60%",
+      "image_alt": "Stone cairns along a desert trail in Wadi Rum",
+      "duration": "4 days on foot",
+      "start": "Wadi Rum Village",
+      "summary": "Four days walking through the heart of Wadi Rum with a Bedouin guide, a support vehicle and a team who cook and set up camp.",
+      "description": [
+        "Experience Wadi Rum on foot with a local Bedouin guide and a support team. Spend four days exploring the desert, mountains, valleys and hidden areas while walking through the heart of Wadi Rum.",
+        "Your guide walks with you every day, while the support vehicle carries your luggage and equipment. Another member of the team prepares your meals and sets up your sleeping area each evening, in a different desert location every night.",
+        "A complete private trekking experience."
+      ],
+      "includes": [
+        "4 days of trekking with a Bedouin hiking guide",
+        "Driver and support vehicle for luggage and equipment",
+        "A team member who cooks and sets up camp",
+        "Tents, sleeping and camping equipment",
+        "Breakfast, lunch and dinner every day (traditional Bedouin meals)",
+        "Drinking water and Bedouin tea",
+        "Camping in a different desert location each night"
+      ],
+      "overnight": false,
+      "fitness": "Several hours of walking each day on sand and rocky trails. Tell us your experience and we'll advise.",
+      "pricing": {
+        "type": "tiers",
+        "tiers": [
+          {
+            "min": 1,
+            "max": 1,
+            "price": 450
+          },
+          {
+            "min": 2,
+            "max": 2,
+            "price": 300
+          },
+          {
+            "min": 3,
+            "max": 3,
+            "price": 230
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "price": 200
+          },
+          {
+            "min": 5,
+            "max": null,
+            "price": null
+          }
+        ]
+      }
     },
     {
       "slug": "camel-ride",

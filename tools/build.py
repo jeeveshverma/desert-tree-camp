@@ -18,6 +18,10 @@ SITE = json.loads((ROOT / "data/site.json").read_text(encoding="utf-8"))
 DATA = json.loads((ROOT / "data/programmes.json").read_text(encoding="utf-8"))
 PROGS = DATA["programmes"]
 BY_SLUG = {p["slug"]: p for p in PROGS}
+# Fixed-price programmes; the custom Multi-Adventure is counted separately.
+N_PROGS = sum(1 for p in PROGS if p["group"] != "custom")
+NUM_WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
+             "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen"]
 AR_NUM = "٠١٢٣٤٥٦٧٨٩"
 e = html.escape
 
@@ -53,6 +57,19 @@ def from_price(p):
         t = min(priced, key=lambda x: x["price"])
         return t["price"], f"per person, {group_label(t)}"
     return None, ""
+
+
+def price_range():
+    prices = []
+    for p in PROGS:
+        pr = p["pricing"]
+        if pr["type"] == "flat":
+            prices.append(pr["price"])
+        elif pr["type"] == "options":
+            prices += [o["price"] for o in pr["options"]]
+        elif pr["type"] == "tiers":
+            prices += [t["price"] for t in pr["tiers"] if t["price"] is not None]
+    return min(prices), max(prices)
 
 
 def group_label(t):
@@ -348,7 +365,7 @@ def business_ld():
         "image": SITE["site_url"].rstrip("/") + "/assets/img/og.png",
         "address": {"@type": "PostalAddress", "addressLocality": "Wadi Rum Village", "addressRegion": "Aqaba Governorate", "addressCountry": "JO"},
         "geo": {"@type": "GeoCoordinates", "latitude": SITE["meeting_point"]["lat"], "longitude": SITE["meeting_point"]["lng"]},
-        "priceRange": "JOD 10–170", "paymentAccepted": "Cash", "currenciesAccepted": "JOD",
+        "priceRange": "JOD {}–{}".format(*price_range()), "paymentAccepted": "Cash", "currenciesAccepted": "JOD",
         "sameAs": [u for u in L.values() if u],
     }
 
@@ -365,7 +382,7 @@ def build_index():
       <h1>The desert, the way <span>the Bedouin know it</span></h1>
       <p class="lede">Cross red sand by jeep, climb to rock bridges and summits, ride camels at sunrise and sleep beneath more stars than you have ever seen. Zayed and his brothers were born here, and they'll show you their desert.</p>
       <div class="cta"><a class="btn gold" href="{{root}}tours.html">Explore the tours</a><a class="btn line" href="{{root}}book.html">Book your trip</a></div>
-      <div class="meta"><span><b>10</b> desert programmes</span><span><b>Cash</b> on arrival</span><span><b>Free</b> cancellation</span></div>
+      <div class="meta"><span><b>{N_PROGS}</b> desert programmes</span><span><b>Cash</b> on arrival</span><span><b>Free</b> cancellation</span></div>
     </div>
     {arch('night', 'assets/img/photos/hero-camp-milky-way-1600.jpg', 'The Milky Way over a striped Bedouin tent at Desert Tree Camp', 'hero-arch', '<span class="tag">A NIGHT AT DESERT TREE CAMP</span>', pos='50% 60%', eager=True, sizes='(max-width: 900px) 90vw, 470px')}
   </div>
@@ -380,7 +397,7 @@ def build_index():
       <p class="intro">Wadi Rum is not a place to rush through. Its canyons, dunes and sandstone mountains change colour from hour to hour, and the best of it is found slowly, with someone who knows the way. Spend a day exploring, share a meal by the fire, then sleep in the silence of the desert.</p>
     </div>
     <div class="pillars">
-      <div class="pillar"><svg class="corner" viewBox="0 0 40 40" aria-hidden="true"><use href="#khatam" fill="none" stroke="#c8963e" stroke-width="2"/></svg><div class="fig"><b>10</b><span class="ar" lang="ar">برامج</span></div><h3>Programmes to choose from</h3><p>From a 30-minute camel ride to two days of hiking with two nights in the open desert.</p></div>
+      <div class="pillar"><svg class="corner" viewBox="0 0 40 40" aria-hidden="true"><use href="#khatam" fill="none" stroke="#c8963e" stroke-width="2"/></svg><div class="fig"><b>{N_PROGS}</b><span class="ar" lang="ar">برامج</span></div><h3>Programmes to choose from</h3><p>From a 30-minute camel ride to four days of trekking across the open desert.</p></div>
       <div class="pillar"><svg class="corner" viewBox="0 0 40 40" aria-hidden="true"><use href="#khatam" fill="none" stroke="#c8963e" stroke-width="2"/></svg><div class="fig"><b>1,854 m</b></div><h3>Jordan's highest summit</h3><p>Hike to the top of Jabal Umm ad Dami, deep in the south of Wadi Rum.</p></div>
       <div class="pillar"><svg class="corner" viewBox="0 0 40 40" aria-hidden="true"><use href="#khatam" fill="none" stroke="#c8963e" stroke-width="2"/></svg><div class="fig"><b>3</b><span class="ar" lang="ar">تحت النجوم</span></div><h3>Ways to spend the night</h3><p>A Bedouin tent, a deluxe tent with a private bathroom, or a mattress under the open sky.</p></div>
       <div class="pillar"><svg class="corner" viewBox="0 0 40 40" aria-hidden="true"><use href="#khatam" fill="none" stroke="#c8963e" stroke-width="2"/></svg><div class="fig"><b>Family</b><span class="ar" lang="ar">بدو</span></div><h3>Run by Bedouin brothers</h3><p>Zayed and his brothers grew up in this desert, like their family before them.</p></div>
@@ -461,11 +478,20 @@ def build_tours():
 <section class="page-head lattice"><div class="ghost ar" lang="ar" aria-hidden="true">البرامج</div><div class="wrap">
   <div class="crumbs"><a href="{{root}}index.html">Home</a> / Tours</div>
   <h1>Tours in Wadi Rum</h1>
-  <p>Ten programmes, from a short camel ride to two days in the mountains, plus custom trips. Prices are per person and drop as your group grows.</p>
+  <p>{NUM_WORDS[N_PROGS]} programmes, from a short camel ride to four days of trekking, plus custom trips. Prices are per person and drop as your group grows.</p>
 </div></section>
 <div class="sadu thin"></div>
 <section class="sec programmes"><div class="wrap">{programme_groups()}{custom_banner()}</div></section>"""
-    return page("tours.html", "Tours in Wadi Rum", "All Desert Tree Camp & Tours programmes in Wadi Rum: jeep tours with overnight, Jabal Burdah, Umm ad Dami, camel rides, stargazing and hot air balloon, with prices.", "tours.html", body)
+    return page("tours.html", "Tours in Wadi Rum", "All Desert Tree Camp & Tours programmes in Wadi Rum: jeep tours with overnight, Jabal Burdah, Umm ad Dami, 2- to 4-day desert adventures, camel rides, stargazing and hot air balloon, with prices.", "tours.html", body)
+
+
+def day_blocks(blocks):
+    out = []
+    for b in blocks:
+        items = "".join(f"<li>{e(x)}</li>" for x in b["items"])
+        note = f'<p class="day-note">{e(b["note"])}</p>' if b.get("note") else ""
+        out.append(f'<div class="day"><h3>{e(b["title"])}</h3><ul class="ticks">{items}</ul>{note}</div>')
+    return "".join(out)
 
 
 def build_tour(p):
@@ -501,6 +527,11 @@ def build_tour(p):
     desc_html = "".join(f"<p>{e(x)}</p>" for x in p["description"])
     inc = "".join(f"<li>{e(x)}</li>" for x in p["includes"])
     fit = f"<h2>Fitness</h2><p>{e(p['fitness'])}</p>" if p.get("fitness") else ""
+    days = ""
+    if p.get("itinerary"):
+        days = "<h2>Day by day</h2>" + day_blocks(p["itinerary"])
+    if p.get("stay_options"):
+        days += "<h2>Where you sleep</h2>" + day_blocks(p["stay_options"])
     acts = ""
     if p.get("activities"):
         acts = "<h2>Activities to choose from</h2><ul class='ticks'>" + "".join(f"<li>{e(a)}</li>" for a in p["activities"]) + "</ul>"
@@ -528,6 +559,7 @@ def build_tour(p):
     {arch(p['scene'], p.get('image'), p.get('image_alt', p['name']), pos=p.get('image_pos', '50% 50%'), eager=True, sizes='(max-width: 920px) 100vw, 720px')}
     <div class="facts">{facts_html}</div>
     <div class="prose">{desc_html}
+      {days}
       <h2>What's included</h2><ul class="ticks">{inc}</ul>
       {acts}{fit}
     </div>

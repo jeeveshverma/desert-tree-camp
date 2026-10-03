@@ -24,7 +24,12 @@ test("mountain programmes and group prices", () => {
   assert.deepEqual([1, 2, 3, 5, 6].map((n) => rateFor(prog("jabal-burdah-adventure"), n)), [120, 65, 50, 50, null]);
   assert.deepEqual([1, 2, 3, 6, 7].map((n) => rateFor(prog("umm-ad-dami-adventure"), n)), [150, 75, 60, 60, null]);
   assert.deepEqual([1, 2, 3, 6, 7].map((n) => rateFor(prog("white-desert-experience"), n)), [null, 60, 50, 50, null]);
-  assert.deepEqual([1, 2, 3].map((n) => rateFor(prog("two-day-desert-adventure"), n)), [170, 170, 120]);
+});
+
+test("multi-day programmes (Zayed, 3 Oct 2026); 5+ people ask for a price", () => {
+  assert.deepEqual([1, 2, 3, 4, 5].map((n) => rateFor(prog("two-day-desert-adventure"), n)), [200, 120, 90, 80, null]);
+  assert.deepEqual([1, 2, 3, 4, 5].map((n) => rateFor(prog("three-day-desert-adventure"), n)), [250, 170, 150, 150, null]);
+  assert.deepEqual([1, 2, 3, 4, 5].map((n) => rateFor(prog("four-day-desert-trek"), n)), [450, 300, 230, 200, null]);
 });
 
 test("flat prices and camel options", () => {
