@@ -26,6 +26,7 @@ function read() {
     infants: parseInt(f.get("infants"), 10) || 0,
     option: f.get("option"),
     night: f.get("night"),
+    stay: f.get("stay"),
     stargazing: $("f-stars").checked,
     name: (f.get("name") || "").trim(),
     country: (f.get("country") || "").trim(),
@@ -34,8 +35,26 @@ function read() {
   };
 }
 
+// Accommodation choice (e.g. camp or desert cave), rebuilt only when the programme changes.
+let stayFor = null;
+function syncStay(p) {
+  const opts = p.stay_options || [];
+  $("w-stay").hidden = !opts.length;
+  if (stayFor === p.slug) return;
+  stayFor = p.slug;
+  $("stay-opts").replaceChildren(...opts.map((o, i) => {
+    const label = document.createElement("label");
+    const input = Object.assign(document.createElement("input"), { type: "radio", name: "stay", value: o.id, checked: i === 0 });
+    const span = document.createElement("span");
+    span.textContent = o.label;
+    label.append(input, span);
+    return label;
+  }));
+}
+
 function sync() {
   const p = byslug[$("f-tour").value];
+  syncStay(p);
   $("w-camel").hidden = p.pricing.type !== "options";
   $("w-night").hidden = !p.overnight || p.pricing.type === "quote";
   $("w-stars").hidden = p.slug === "stargazing";
@@ -75,6 +94,10 @@ function message(r, est) {
   if (!$("w-night").hidden) {
     const n = data.overnight_options.find((x) => x.id === r.night);
     if (n) L.push(`Night: ${n.name}`);
+  }
+  if (!$("w-stay").hidden) {
+    const s = (p.stay_options || []).find((x) => x.id === r.stay);
+    if (s) L.push(`Accommodation: ${s.label}`);
   }
   if (r.stargazing && p.slug !== "stargazing") L.push("Add-on: Stargazing (2 hours)");
   L.push(`Coming from: ${r.from}`);

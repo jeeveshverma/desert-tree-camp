@@ -93,6 +93,23 @@ def price_rows(p):
     return []
 
 
+# ---------------------------------------------------------------- structured data
+def abs_url(path):
+    return SITE["site_url"].rstrip("/") + "/" + path.replace("index.html", "")
+
+
+def crumbs_ld(*items):
+    """BreadcrumbList matching the visible crumbs. items: (name, path)."""
+    trail = [("Home", "index.html")] + list(items)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": abs_url(u)} for i, (n, u) in enumerate(trail)]}
+
+
+def faq_ld(items):
+    return {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in items]}
+
+
 # ---------------------------------------------------------------- shared parts
 SVG_DEFS = """<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <clipPath id="archClip" clipPathUnits="objectBoundingBox"><path d="M0,1 L0,0.36 C0,0.2 0.24,0.08 0.5,0 C0.76,0.08 1,0.2 1,0.36 L1,1 Z"/></clipPath>
@@ -127,7 +144,8 @@ CSP = ("default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';
 
 def head(title, desc, path, root, jsonld=None):
     url = SITE["site_url"].rstrip("/") + "/" + path.replace("index.html", "")
-    ld = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False).replace("</", "<\\/")}</script>' if jsonld else ""
+    blocks = jsonld if isinstance(jsonld, list) else [jsonld] if jsonld else []
+    ld = "".join(f'<script type="application/ld+json">{json.dumps(b, ensure_ascii=False).replace("</", "<\\/")}</script>' for b in blocks)
     full = title if title == SITE["name"] else f"{title} · {SITE['name']}"
     return f"""<!doctype html>
 <html lang="en">
@@ -203,10 +221,17 @@ def footer(root):
 <script src="{root}assets/js/main.js" defer></script>"""
 
 
+def wa_float():
+    icon = ('<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>')
+    msg = "Hello Zayed, I have a question about Desert Tree Camp & Tours."
+    return f'\n<a class="wa-float" href="{e(wa_link(msg))}" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">{icon}<span>WhatsApp</span></a>'
+
+
 def page(path, title, desc, active, body, jsonld=None, tail=""):
     depth = path.count("/")
     root = "../" * depth
-    out = head(title, desc, path, root, jsonld) + header(root, active) + body.replace("{root}", root) + footer(root) + tail.replace("{root}", root) + "\n</body>\n</html>\n"
+    fab = "" if path == "book.html" else wa_float()
+    out = head(title, desc, path, root, jsonld) + header(root, active) + body.replace("{root}", root) + footer(root) + fab + tail.replace("{root}", root) + "\n</body>\n</html>\n"
     f = ROOT / path
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text(out, encoding="utf-8")
@@ -295,7 +320,7 @@ GALLERY = [
 
 def gallery():
     items = "".join(
-        f'<figure class="g {cls}">{img_tag(f"assets/img/photos/{n}-800.jpg", alt, sizes="(max-width: 700px) 50vw, 400px")}</figure>'
+        f'<figure class="g {cls}"><a href="{{root}}assets/img/photos/{n}-1600.jpg" data-lightbox>{img_tag(f"assets/img/photos/{n}-800.jpg", alt, sizes="(max-width: 700px) 50vw, 400px")}</a></figure>'
         for n, alt, cls in GALLERY
     )
     return f'<div class="gallery">{items}</div>'
@@ -477,7 +502,8 @@ def build_index():
   </div>
 </section>"""
     desc = "Jeep tours, mountain hikes, camel rides and nights under the stars in Wadi Rum, Jordan, with a Bedouin family. Prices from 10 JOD, cash on arrival, free cancellation."
-    return page("index.html", SITE["name"], desc, "index.html", body, business_ld())
+    tail = '<script src="{root}assets/js/lightbox.js" defer></script>'
+    return page("index.html", SITE["name"], desc, "index.html", body, [business_ld(), faq_ld(FAQ)], tail=tail)
 
 
 def build_tours():
@@ -489,7 +515,7 @@ def build_tours():
 </div></section>
 <div class="sadu thin"></div>
 <section class="sec programmes"><div class="wrap">{programme_groups()}{custom_banner()}</div></section>"""
-    return page("tours.html", "Tours in Wadi Rum", "All Desert Tree Camp & Tours programmes in Wadi Rum: jeep tours with overnight, Jabal Burdah, Umm ad Dami, 2- to 4-day desert adventures, camel rides, stargazing and hot air balloon, with prices.", "tours.html", body)
+    return page("tours.html", "Tours in Wadi Rum", "All Desert Tree Camp & Tours programmes in Wadi Rum: jeep tours with overnight, Jabal Burdah, Umm ad Dami, 2- to 4-day desert adventures, camel rides, stargazing and hot air balloon, with prices.", "tours.html", body, crumbs_ld(("Tours", "tours.html")))
 
 
 def day_blocks(blocks):
@@ -553,6 +579,12 @@ def build_tour(p):
           "touristType": "Adventure", "provider": {"@type": "LodgingBusiness", "name": SITE["name"], "telephone": "+" + SITE["whatsapp"]}}
     if price is not None:
         ld["offers"] = {"@type": "Offer", "price": price, "priceCurrency": "JOD", "availability": "https://schema.org/InStock"}
+    if p.get("image"):
+        ld["image"] = abs_url(p["image"])
+    if p.get("itinerary"):
+        ld["itinerary"] = {"@type": "ItemList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": b["title"], "description": "; ".join(b["items"])}
+            for i, b in enumerate(p["itinerary"])]}
 
     body = f"""
 <section class="page-head lattice"><div class="ghost ar" lang="ar" aria-hidden="true">وادي رم</div><div class="wrap">
@@ -583,7 +615,8 @@ def build_tour(p):
   <div class="group-head"><h3>You might also like</h3><span class="ar" lang="ar">برامج أخرى</span></div>
   <div class="cards c3">{other_cards}</div>
 </div></section>"""
-    return page(f"tours/{p['slug']}.html", p["name"], p["summary"], "tours.html", body, ld)
+    crumbs = crumbs_ld(("Tours", "tours.html"), (p["name"], f"tours/{p['slug']}.html"))
+    return page(f"tours/{p['slug']}.html", p["name"], p["summary"], "tours.html", body, [ld, crumbs])
 
 
 def build_camp():
@@ -620,7 +653,7 @@ def build_camp():
     {f'<a class="btn line" href="{e(L["booking"])}" target="_blank" rel="noopener">See us on Booking.com</a>' if L.get('booking') else ''}
   </p>
 </div></section>"""
-    return page("camp.html", "The camp", "Desert Tree Camp in Wadi Rum: Bedouin tents with shared bathroom, deluxe tents with private bathroom, or sleeping under the stars. Hot showers and Western-style toilets.", "camp.html", body)
+    return page("camp.html", "The camp", "Desert Tree Camp in Wadi Rum: Bedouin tents with shared bathroom, deluxe tents with private bathroom, or sleeping under the stars. Hot showers and Western-style toilets.", "camp.html", body, crumbs_ld(("The camp", "camp.html")))
 
 
 def build_about():
@@ -642,7 +675,7 @@ def build_about():
   </div>
 </div></section>
 <section class="sec faq"><div class="wrap"><div class="sec-head">{eyebrow('قبل أن تصل', 'Good to know')}<h2>Before you come</h2></div>{faq_html(FAQ)}</div></section>"""
-    return page("about.html", "About us", "Meet Zayed and his brothers, a Bedouin family running Desert Tree Camp & Tours in Wadi Rum, Jordan.", "about.html", body)
+    return page("about.html", "About us", "Meet Zayed and his brothers, a Bedouin family running Desert Tree Camp & Tours in Wadi Rum, Jordan.", "about.html", body, [crumbs_ld(("About us", "about.html")), faq_ld(FAQ)])
 
 
 def build_book():
@@ -672,6 +705,7 @@ def build_book():
       <div class="fl"><label for="f-kids">Children aged 3–10</label><input id="f-kids" name="children" type="number" min="0" max="20" value="0" inputmode="numeric"><small>Half price</small></div>
       <div class="fl"><label for="f-infants">Children under 3</label><input id="f-infants" name="infants" type="number" min="0" max="10" value="0" inputmode="numeric"><small>Free</small></div>
       <fieldset class="fl full" id="w-camel" hidden><legend>Camel ride length</legend><div class="seg">{camel_opts}</div></fieldset>
+      <fieldset class="fl full" id="w-stay" hidden><legend>Accommodation</legend><div class="seg" id="stay-opts"></div></fieldset>
       <fieldset class="fl full" id="w-night"><legend>Where would you like to sleep?</legend><div class="seg">{night_opts}</div></fieldset>
       <div class="fl full" id="w-stars"><label class="check"><input type="checkbox" id="f-stars" name="stargazing"> Add the 2-hour stargazing experience (15 JOD per person)</label></div>
       <div class="fl"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
@@ -697,7 +731,7 @@ def build_book():
     data_json = json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/")
     tail = f"""<script id="tour-data" type="application/json">{data_json}</script>
 <script type="module" src="{{root}}assets/js/book.js"></script>"""
-    return page("book.html", "Book your trip", "Check prices and send a booking request to Desert Tree Camp & Tours on WhatsApp. Pay in cash on arrival, free cancellation.", "book.html", body, tail=tail)
+    return page("book.html", "Book your trip", "Check prices and send a booking request to Desert Tree Camp & Tours on WhatsApp. Pay in cash on arrival, free cancellation.", "book.html", body, crumbs_ld(("Book your trip", "book.html")), tail=tail)
 
 
 def build_404():

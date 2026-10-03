@@ -488,14 +488,18 @@
           "items": [
             "Night 1: private tent at the camp",
             "Night 2: private tent at the camp"
-          ]
+          ],
+          "id": "camp",
+          "label": "Two nights at the camp"
         },
         {
           "title": "Option 2: One night in a desert cave",
           "items": [
             "Night 1: private tent at the camp",
             "Night 2: natural desert cave under the stars"
-          ]
+          ],
+          "id": "cave",
+          "label": "Night 2 in a desert cave"
         }
       ],
       "includes": [
