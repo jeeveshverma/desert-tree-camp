@@ -120,15 +120,22 @@ def arch(scene, image=None, alt="", cls="", extra="", pos="50% 50%", eager=False
     return f'<div class="arch {cls}"><div class="clip">{inner}</div>{RIM}{extra}</div>'
 
 
+# GitHub Pages can't send headers, so the policy goes in a meta tag. Only own scripts run.
+CSP = ("default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; "
+       "font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'")
+
+
 def head(title, desc, path, root, jsonld=None):
     url = SITE["site_url"].rstrip("/") + "/" + path.replace("index.html", "")
-    ld = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>' if jsonld else ""
+    ld = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False).replace("</", "<\\/")}</script>' if jsonld else ""
     full = title if title == SITE["name"] else f"{title} · {SITE['name']}"
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="{CSP}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>{e(full)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{e(url)}">
@@ -658,7 +665,7 @@ def build_book():
 <div class="sadu thin"></div>
 <section class="book lattice"><div class="wrap">
   <div class="req-grid">
-    <form class="form" id="req" novalidate>
+    <form class="form" id="req" data-whatsapp="{e(SITE['whatsapp'])}" novalidate>
       <div class="fl full"><label for="f-tour">Tour</label><select id="f-tour" name="programme">{''.join(groups)}</select></div>
       <div class="fl"><label for="f-date">Date</label><input id="f-date" name="date" type="date" required></div>
       <div class="fl"><label for="f-adults">Adults and children over 10</label><input id="f-adults" name="adults" type="number" min="0" max="40" value="2" inputmode="numeric"></div>
@@ -689,7 +696,6 @@ def build_book():
 <div class="toast" id="toast" hidden></div>"""
     data_json = json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/")
     tail = f"""<script id="tour-data" type="application/json">{data_json}</script>
-<script>window.SITE_WHATSAPP="{SITE['whatsapp']}";</script>
 <script type="module" src="{{root}}assets/js/book.js"></script>"""
     return page("book.html", "Book your trip", "Check prices and send a booking request to Desert Tree Camp & Tours on WhatsApp. Pay in cash on arrival, free cancellation.", "book.html", body, tail=tail)
 

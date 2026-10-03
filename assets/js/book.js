@@ -2,8 +2,8 @@
 import { estimate } from "./pricing.js";
 
 const data = JSON.parse(document.getElementById("tour-data").textContent);
-const WA = window.SITE_WHATSAPP;
 const form = document.getElementById("req");
+const WA = form.dataset.whatsapp;
 const $ = (id) => document.getElementById(id);
 const byslug = Object.fromEntries(data.programmes.map((p) => [p.slug, p]));
 const fmt = (n) => (Number.isInteger(n) ? String(n) : n.toFixed(2).replace(/\.?0+$/, ""));
